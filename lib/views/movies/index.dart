@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:starterkit/api/api_response.dart';
-import 'package:starterkit/blocs/movie_bloc.dart';
-import 'package:starterkit/models/movie.dart';
-import 'package:starterkit/utils/constants.dart';
-import 'package:starterkit/views/partials/api_error.dart';
-import 'package:starterkit/views/partials/loading.dart';
+import 'package:autoserve/api/api_response.dart';
+import 'package:autoserve/blocs/movie_bloc.dart';
+import 'package:autoserve/models/movie.dart';
+import 'package:autoserve/utils/constants.dart';
+import 'package:autoserve/views/partials/api_error.dart';
+import 'package:autoserve/views/partials/loading.dart';
 
 import 'list.dart';
 

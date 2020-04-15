@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'dart:io' show Platform;
 
 import 'package:get_version/get_version.dart';
-import 'package:starterkit/utils/constants.dart';
-import 'package:starterkit/utils/styles.dart';
-import 'package:starterkit/views/partials/common_appbar_actions.dart';
-import 'package:starterkit/views/partials/fake_bottom_buttons.dart';
+import 'package:autoserve/utils/constants.dart';
+import 'package:autoserve/utils/styles.dart';
+import 'package:autoserve/views/partials/common_appbar_actions.dart';
+import 'package:autoserve/views/partials/fake_bottom_buttons.dart';
 
 class AboutPage extends StatefulWidget {
   @override

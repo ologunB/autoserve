@@ -1,24 +1,24 @@
-import 'env.dart';
+//import 'env.dart';
 
 class Constants {
   static bool testing = false;
 
   /// general setup
-  static String appId = "space.acelords.starterkit";
-  static String iosAppId = "space.acelords.starterkit";
-  static String appName = "Flutter Starter Kit";
+  static String appId = "com.autoserveng.autoserve";
+  static String iosAppId = "com.autoserveng.autoserve";
+  static String appName = "AutoServe";
   static String appTagLine = "Buiild a FLutter app like a Pro by Using the BLoC Pattern!";
-  static String appBio = "The Best Flutter Starter Kit";
-  static String contactEmail = "support@acelords.space";
+  static String appBio = "The Best Vehicle Service App";
+  static String contactEmail = "support@autoserve.com";
   static String logoKey = "assets/images/logo.png";
-  static String appAbout = "Using this app will improve your project deliverability and sharpen your understanding of Flutter"
-      "and BLoC pattern in no time. Build Flutter apps like a pro!";
+  static String appAbout = "Using this app will provide you and your vehicle with quality service professionals"
+      "and you are getting it at an affordable price!";
 
   /// Share message
-  static String shareLink = "http://bit.ly/acelords";
+  static String shareLink = "http://bit.ly/autoserveng";
   static String shareMessage = "Check out this Amazing App at " + shareLink;
-  static String shareSubject = "Best App Ever!";
-  static String twitterUrl = "https://twitter.com/acelords";
+  static String shareSubject = "Best Vehicle Service App!";
+  static String twitterUrl = "https://twitter.com/autoserve";
 
   /// http headers
   static Object apiHeaders = {
@@ -54,10 +54,10 @@ class Constants {
   static String vipCoinsDateKey = "vip_coins_date";
 
   // api keys
-  static String moviesApiKey = Env.moviesApiKey; // e.g. "bff708fnwFwef9832ed927da1d";
+//  static String moviesApiKey = Env.moviesApiKey; // e.g. "bff708fnwFwef9832ed927da1d";
 
   /// api routes
   static String apiBaseUrl = "http://api.themoviedb.org/3/";
-  static String moviesUrl = apiBaseUrl + "movie/popular?api_key=" + moviesApiKey;
+//  static String moviesUrl = apiBaseUrl + "movie/popular?api_key=" + moviesApiKey;
 
 }

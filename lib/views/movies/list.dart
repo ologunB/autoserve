@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:starterkit/models/movie.dart';
+import 'package:autoserve/models/movie.dart';
 
 class MovieList extends StatelessWidget {
   final List<Movie> movieList;

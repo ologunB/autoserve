@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:starterkit/utils/constants.dart';
+import 'package:autoserve/utils/constants.dart';
 
 class DashboardPage extends StatefulWidget {
   @override

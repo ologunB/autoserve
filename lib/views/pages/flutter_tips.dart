@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:starterkit/utils/constants.dart';
-import 'package:starterkit/utils/styles.dart';
+import 'package:autoserve/utils/constants.dart';
+import 'package:autoserve/utils/styles.dart';
 
 class FlutterTipsPage extends StatelessWidget {
 

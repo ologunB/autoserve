@@ -1,4 +1,6 @@
+import 'package:autoserve/views/pages/intro_screen.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -6,45 +8,49 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AutoServe',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'AutoServe'),
+      home: SplashScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+class SplashScreen extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<StatefulWidget> createState() {
+    return SplashScreenState();
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    loadData();
+  }
+
+  Future<Timer> loadData() async {
+    return new Timer(Duration(seconds: 5), onDoneLoading);
+  }
+
+  onDoneLoading() async {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => IntroScreenPage(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Hello',
-            ),
-          ],
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('assets/images/SplashUser.png'),
+            fit: BoxFit.cover),
       ),
     );
   }

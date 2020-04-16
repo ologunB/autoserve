@@ -1,134 +1,285 @@
-import 'package:autoserve/views/pages/home.dart';
 import 'package:flutter/material.dart';
-import 'package:intro_views_flutter/Models/page_view_model.dart';
-import 'package:intro_views_flutter/intro_views_flutter.dart';
-import 'package:autoserve/utils/constants.dart';
+import 'package:flutter/services.dart';
 import 'package:autoserve/utils/styles.dart';
 
-
-class IntroScreenPage extends StatefulWidget {
+class OnboardingScreen extends StatefulWidget {
   @override
-  _IntroScreenPageState createState() => _IntroScreenPageState();
+  _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
-class _IntroScreenPageState extends State<IntroScreenPage> {
-  static final List<String> images = [
-    'assets/images/Walkthrough1.png',
-    'assets/images/Walkthrough2.png',
-    'assets/images/Walkthrough3.png',
-    'assets/images/Walkthrough4.png',
-  ];
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  final int _numPages = 4;
+  final PageController _pageController = PageController(initialPage: 0);
+  int _currentPage = 0;
 
-  static final List<String> titles = [
-    Constants.appName,
-    'Flutter Boilerplate/Starter Kit',
-    'Enjoy Coding',
-  ];
+  List<Widget> _buildPageIndicator() {
+    List<Widget> list = [];
+    for (int i = 0; i < _numPages; i++) {
+      list.add(i == _currentPage ? _indicator(true) : _indicator(false));
+    }
+    return list;
+  }
 
-  static final List<String> descriptions = [
-    'Some random text\nwill surely appear here',
-    'Some random text\nwill surely appear here',
-    'Some random text\nwill surely appear here',
-    'Some random text\nwill surely appear here',
-  ];
-
-  final pages = [
-    PageViewModel(
-      pageColor: const Color.fromRGBO(22, 160, 133, 1),
-      // iconImageAssetPath: 'assets/air-hostess.png',
-//      bubble: Image.asset(images[0]),
-//      title: Text(titles[0]),
-      body: Text(descriptions[0]),
-      titleTextStyle: TextStyle(fontFamily: 'Radicals', color: Colors.white),
-      bodyTextStyle: Styles.p.copyWith(
-        color: Colors.white,
-        fontFamily: 'Comfortaa',
-        fontStyle: FontStyle.italic,
+  Widget _indicator(bool isActive) {
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 150),
+      margin: EdgeInsets.symmetric(horizontal: 8.0),
+      height: 8.0,
+      width: isActive ? 24.0 : 16.0,
+      decoration: BoxDecoration(
+        color: isActive ? Colors.white : Color(0xFF7B51D3),
+        borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
-      mainImage: Image.asset(
-        images[0],
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      )
-    ),
-    PageViewModel(
-      pageColor: const Color(0xFF8BC34A),
-//      iconImageAssetPath: images[1],
-//      title: Text(titles[1]),
-      body: Text(descriptions[1]),
-      mainImage: Image.asset(
-        images[1],
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      ),
-      titleTextStyle: TextStyle(fontFamily: 'Radicals', color: Colors.white),
-      bodyTextStyle: Styles.p.copyWith(
-        color: Colors.white,
-        fontFamily: 'Comfortaa',
-        fontStyle: FontStyle.italic,
-      ),
-    ),
-    PageViewModel(
-      pageColor: const Color.fromRGBO(22, 160, 133, 1),
-//      iconImageAssetPath: images[2],
-//      title: Text(titles[2]),
-      body: Text(descriptions[2]),
-      mainImage: Image.asset(
-        images[2],
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      ),
-      titleTextStyle: TextStyle(fontFamily: 'Radicals', color: Colors.white),
-      bodyTextStyle: Styles.p.copyWith(
-        color: Colors.white,
-        fontFamily: 'Comfortaa',
-        fontStyle: FontStyle.italic,
-      ),
-    ),
-    PageViewModel(
-      pageColor: const Color.fromRGBO(22, 160, 133, 1),
-//      iconImageAssetPath: images[2],
-//      title: Text(titles[2]),
-      body: Text(descriptions[3]),
-      mainImage: Image.asset(
-        images[3],
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      ),
-      titleTextStyle: TextStyle(fontFamily: 'Radicals', color: Colors.white),
-      bodyTextStyle: Styles.p.copyWith(
-        color: Colors.white,
-        fontFamily: 'Comfortaa',
-        fontStyle: FontStyle.italic,
-      ),
-    ),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Builder(
-      builder: (context) => IntroViewsFlutter(
-            pages,
-            showNextButton: true,
-            showBackButton: true,
-            onTapDoneButton: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ),
-              );
-            },
-            pageButtonTextStyles: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-            ),
-          ),
     );
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: Container(
+          child: PageView(
+            physics: ClampingScrollPhysics(),
+            controller: _pageController,
+            onPageChanged: (int page) {
+              setState(() {
+                _currentPage = page;
+              });
+            },
+            children: <Widget>[
+              Container(
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Walkthrough1.png'),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Positioned(
+                      top: 40,
+                      left: MediaQuery.of(context).size.width - 100,
+//                    left: 305,
+//                    right: 15,
+//                    bottom: 150,
+                      child: FlatButton(
+                        onPressed: () => print('Skipped!'),
+                        child: Text(
+                          'Skip',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF6C63FF),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+//                    top: 569,
+                      left: 25,
+                      right: 25,
+                      bottom: 150,
+                      child: Text(
+                        'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                        style: kSubtitleStyle,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Walkthrough2.png'),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Positioned(
+                      top: 40,
+                      left: MediaQuery.of(context).size.width - 100,
+//                    left: 305,
+//                    right: 15,
+//                    bottom: 150,
+                      child: FlatButton(
+                        onPressed: () => print('Skipped!'),
+                        child: Text(
+                          'Skip',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF6C63FF),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+//                    top: 569,
+                      left: 25,
+                      right: 25,
+                      bottom: 150,
+                      child: Text(
+                        'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                        style: kSubtitleStyle,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Walkthrough3.png'),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Positioned(
+                      top: 40,
+                      left: MediaQuery.of(context).size.width - 100,
+//                    left: 305,
+//                    right: 15,
+//                    bottom: 150,
+                      child: FlatButton(
+                        onPressed: () => print('Skipped!'),
+                        child: Text(
+                          'Skip',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF6C63FF),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+//                    top: 569,
+                      left: 25,
+                      right: 25,
+                      bottom: 150,
+                      child: Text(
+                        'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                        style: kSubtitleStyle,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Walkthrough4.png'),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Positioned(
+                      top: 40,
+                      left: MediaQuery.of(context).size.width - 100,
+//                    left: 305,
+//                    right: 15,
+//                    bottom: 150,
+                      child: FlatButton(
+                        onPressed: () => print('Skipped!'),
+                        child: Text(
+                          'Skip',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF6C63FF),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+//                    top: 569,
+                      left: 25,
+                      right: 25,
+                      bottom: 150,
+                      child: Text(
+                        'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                        style: kSubtitleStyle,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: _buildPageIndicator(),
+              ),
+              Positioned(
+                bottom: 100,
+                child: _currentPage != _numPages - 1
+                    ? Expanded(
+                        child: Align(
+                          alignment: FractionalOffset.bottomRight,
+                          child: FlatButton(
+                            onPressed: () {
+                              _pageController.nextPage(
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Text(
+                                  'Next',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 22.0,
+                                  ),
+                                ),
+                                SizedBox(width: 10.0),
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.blue,
+                                  size: 30.0,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    : Text(''),
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomSheet: _currentPage == _numPages - 1
+          ? Container(
+              height: 100.0,
+              width: double.infinity,
+              color: Colors.white,
+              child: GestureDetector(
+                onTap: () => print('Get started'),
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: Text(
+                      'Get started',
+                      style: TextStyle(
+                        color: Color(0xFF5B16D0),
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : Text(''),
+    );
+  }
 }

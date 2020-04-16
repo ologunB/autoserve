@@ -131,3 +131,17 @@ class Styles {
   static Color rightMessageAkaColor = Color.fromRGBO(139, 172, 244, 1);
   static Color rightMessageMessageColor = Colors.white;
 }
+
+
+final kTitleStyle = TextStyle(
+  color: Colors.white,
+  fontFamily: 'CM Sans Serif',
+  fontSize: 26.0,
+  height: 1.5,
+);
+
+final kSubtitleStyle = TextStyle(
+  color: Colors.blue,
+  fontSize: 14.0,
+  height: 1.2,
+);

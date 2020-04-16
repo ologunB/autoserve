@@ -1,14 +1,5 @@
-import 'package:starterkit/views/auth/login.dart';
-import 'package:starterkit/views/pages/about.dart';
-import 'package:starterkit/views/pages/dashboard.dart';
-import 'package:starterkit/views/pages/flutter_tips.dart';
-import 'package:starterkit/views/pages/home.dart';
-import 'package:starterkit/views/pages/rate_app.dart';
-import 'package:starterkit/views/pages/refer_a_friend.dart';
-import 'package:starterkit/views/pages/splash_page.dart';
-
 Object appRoutes = {
-  '/': (context) => HomePage(),
+/*  '/': (context) => HomePage(),
 //  '/auth': (context) => Router(),
 
 // pages
@@ -22,6 +13,5 @@ Object appRoutes = {
   '/login': (context) => LoginPage(),
   '/dashboard': (context) => DashboardPage(),
 
-  // backend
-
+  // backend*/
 };

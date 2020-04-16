@@ -38,6 +38,7 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
         bucket: bucket,
       ),
       bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.white,
           elevation: 15,
           onTap: (i) {
             setState(() {

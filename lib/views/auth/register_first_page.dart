@@ -81,204 +81,227 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
             )
           ],
         ),
-        body: Container(
-          padding: EdgeInsets.all(10),
-          color: Colors.white,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                "Let's get Started",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900),
-              ),
-              SizedBox(height: 10),
-              Text(
-                "It takes just a minute to set up your account and start requestig for auto repair services",
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.grey),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 18.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                      fillColor: Styles.commonDarkBackground,
-                      filled: true,
-                      contentPadding: EdgeInsets.all(10),
-                      hintText: 'Full Name',
-                      hintStyle: TextStyle(
-                          color: Colors.grey[500],
-                          fontSize: 22,
-                          fontWeight: FontWeight.w400),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      )),
+        body: SingleChildScrollView(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            padding: EdgeInsets.all(10),
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Let's get Started",
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w400),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w900),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 18.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                      fillColor: Styles.commonDarkBackground,
-                      filled: true,
-                      contentPadding: EdgeInsets.all(10),
-                      hintText: 'Email',
-                      hintStyle: TextStyle(
-                          color: Colors.grey[500],
-                          fontSize: 22,
-                          fontWeight: FontWeight.w400),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      )),
+                SizedBox(height: 10),
+                Text(
+                  "It takes just a minute to set up your account and start requestig for auto repair services",
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w400),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 18.0),
-                child: Container(
-                  color: Styles.commonDarkBackground,
-                  padding: EdgeInsets.only(left: 10),
-                  child: Row(
-                    children: <Widget>[
-                      _buildCountryPickerDropdown(),
-                      Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            fillColor: Styles.commonDarkBackground,
-                            filled: true,
-                            contentPadding: EdgeInsets.all(10),
-                            hintText: '(555) 555 555',
-                            hintStyle: TextStyle(
-                                color: Colors.grey[500],
-                                fontSize: 22,
-                                fontWeight: FontWeight.w400),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5.0),
-                            ),
-                          ),
-                          style: TextStyle(
-                              color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 18.0),
+                  child: Theme(
+                    data: ThemeData(
+                        primaryColor: Styles.commonDarkBackground,
+                        hintColor: Styles.commonDarkBackground),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          fillColor: Styles.commonDarkBackground,
+                          filled: true,
+                          contentPadding: EdgeInsets.all(10),
+                          hintText: 'Full Name',
+                          hintStyle: TextStyle(
+                              color: Colors.grey[500],
                               fontSize: 22,
                               fontWeight: FontWeight.w400),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 18.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                      fillColor: Styles.commonDarkBackground,
-                      filled: true,
-                      contentPadding: EdgeInsets.all(10),
-                      hintText: 'Password',
-                      hintStyle: TextStyle(
-                          color: Colors.grey[500],
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                          )),
+                      style: TextStyle(
+                          color: Colors.black,
                           fontSize: 22,
                           fontWeight: FontWeight.w400),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      )),
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w400),
+                    ),
+                  ),
                 ),
-              ),
-              CustomButton(
-                title: "Continue",
-                onPress: () {
-                  Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (context) => RegisterSecondPage()));
-                },
-              ),
-              Flexible(
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: RichText(
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 18.0),
+                  child: Theme(
+                    data: ThemeData(
+                        primaryColor: Styles.commonDarkBackground,
+                        hintColor: Styles.commonDarkBackground),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          fillColor: Styles.commonDarkBackground,
+                          filled: true,
+                          contentPadding: EdgeInsets.all(10),
+                          hintText: 'Email',
+                          hintStyle: TextStyle(
+                              color: Colors.grey[500],
+                              fontSize: 22,
+                              fontWeight: FontWeight.w400),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                          )),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 18.0),
+                  child: Container(
+                    color: Styles.commonDarkBackground,
+                    padding: EdgeInsets.only(left: 10),
+                    child: Row(
+                      children: <Widget>[
+                        _buildCountryPickerDropdown(),
+                        Expanded(
+                          child: Theme(
+                            data: ThemeData(
+                                primaryColor: Styles.commonDarkBackground,
+                                hintColor: Styles.commonDarkBackground),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                fillColor: Styles.commonDarkBackground,
+                                filled: true,
+                                contentPadding: EdgeInsets.all(10),
+                                hintText: '(555) 555 555',
+                                hintStyle: TextStyle(
+                                    color: Colors.grey[500],
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w400),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                              ),
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 18.0),
+                  child: Theme(
+                    data: ThemeData(
+                        primaryColor: Styles.commonDarkBackground,
+                        hintColor: Styles.commonDarkBackground),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          fillColor: Styles.commonDarkBackground,
+                          filled: true,
+                          contentPadding: EdgeInsets.all(10),
+                          hintText: 'Password',
+                          hintStyle: TextStyle(
+                              color: Colors.grey[500],
+                              fontSize: 22,
+                              fontWeight: FontWeight.w400),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                          )),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ),
+                CustomButton(
+                  title: "Continue",
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => RegisterSecondPage()));
+                  },
+                ),
+                Flexible(
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                            text: 'Already have an account? ',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: 'Log in',
+                                  style: TextStyle(
+                                      color: Colors.blue, fontSize: 18),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      // navigate to desired screen
+                                    }),
+                            ]),
+                      ),
+                    ),
+                  ),
+                ),
+                Flexible(
+                    child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  //  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
-                          text: 'Already have an account? ',
+                          text: "By signing up you agree to AutoServe's ",
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Log in',
-                                style:
-                                    TextStyle(color: Colors.blue, fontSize: 18),
+                                text: 'Terms and Condition',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.blue),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    // navigate to desired screen
+                                  }),
+                            TextSpan(
+                              text: ' and ',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.grey),
+                            ),
+                            TextSpan(
+                                text: 'Privacy Policy',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.blue),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
                                     // navigate to desired screen
                                   }),
                           ]),
-                    ),
-                  ),
-                ),
-              ),
-              Flexible(
-                  child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                //  mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                        text: "By signing up you agree to AutoServe's ",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'Terms and Condition',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.blue),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  // navigate to desired screen
-                                }),
-                          TextSpan(
-                            text: ' and ',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey),
-                          ),
-                          TextSpan(
-                              text: 'Privacy Policy',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.blue),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  // navigate to desired screen
-                                }),
-                        ]),
-                  )
-                ],
-              ))
-            ],
+                    )
+                  ],
+                ))
+              ],
+            ),
           ),
         ),
       ),

@@ -27,8 +27,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       height: 8.0,
       width: isActive ? 24.0 : 16.0,
       decoration: BoxDecoration(
-        color: isActive ? Colors.white : Color(0xFF7B51D3),
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+        color: isActive ? Colors.grey : Color(0xFF7B51D3),
+        borderRadius: BorderRadius.all(Radius.circular(8)),
       ),
     );
   }
@@ -86,6 +86,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         style: kSubtitleStyle,
                       ),
                     ),
+                    Positioned(
+                      bottom: 120,
+                      child: Align(alignment: Alignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: _buildPageIndicator(),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -125,6 +134,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       child: Text(
                         'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
                         style: kSubtitleStyle,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 120,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: _buildPageIndicator(),
                       ),
                     ),
                   ],
@@ -168,6 +184,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         style: kSubtitleStyle,
                       ),
                     ),
+                    Positioned(
+                      bottom: 120,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: _buildPageIndicator(),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -209,50 +232,54 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         style: kSubtitleStyle,
                       ),
                     ),
+                    Positioned(
+                      bottom: 120,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: _buildPageIndicator(),
+                      ),
+                    ),
                   ],
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: _buildPageIndicator(),
-              ),
-              Positioned(
-                bottom: 100,
-                child: _currentPage != _numPages - 1
-                    ? Expanded(
-                        child: Align(
-                          alignment: FractionalOffset.bottomRight,
-                          child: FlatButton(
-                            onPressed: () {
-                              _pageController.nextPage(
-                                duration: Duration(milliseconds: 500),
-                                curve: Curves.ease,
-                              );
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                Text(
-                                  'Next',
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                    fontSize: 22.0,
-                                  ),
-                                ),
-                                SizedBox(width: 10.0),
-                                Icon(
-                                  Icons.arrow_forward,
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: _buildPageIndicator(),
+//              ),
+              _currentPage != _numPages - 1
+                  ? Expanded(
+                      child: Align(
+                        alignment: FractionalOffset.bottomRight,
+                        child: FlatButton(
+                          onPressed: () {
+                            _pageController.nextPage(
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              Text(
+                                'Next',
+                                style: TextStyle(
                                   color: Colors.blue,
-                                  size: 30.0,
+                                  fontSize: 22.0,
                                 ),
-                              ],
-                            ),
+                              ),
+                              SizedBox(width: 10.0),
+                              Icon(
+                                Icons.arrow_forward,
+                                color: Colors.blue,
+                                size: 30.0,
+                              ),
+                            ],
                           ),
                         ),
-                      )
-                    : Text(''),
-              ),
+                      ),
+                    )
+                  : Text(''),
             ],
           ),
         ),

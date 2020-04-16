@@ -1,4 +1,5 @@
 import 'package:autoserve/utils/styles.dart';
+import 'package:autoserve/views/auth/register_complete_page.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +88,12 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                 padding: const EdgeInsets.symmetric(vertical: 28.0),
                 child: CustomButton(
                   title: "Continue",
-                  onPress: () {},
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => RegisterCompleteScreen()));
+                  },
                 ),
               ),
             ],

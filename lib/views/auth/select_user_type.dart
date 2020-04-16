@@ -43,15 +43,17 @@ class _SelectUserTypeState extends State<SelectUserType> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.yellow,
               child: Stack(
                 children: <Widget>[
                   ClipPath(
                     child: Container(
                       decoration: BoxDecoration(
+                        color: Styles.appPrimaryColor,
+                        backgroundBlendMode: BlendMode.color,
                         image: DecorationImage(
-                            image: AssetImage("assets/images/cc3.jpg"),
-                            fit: BoxFit.fill),
+                          image: AssetImage("assets/images/cc3.jpg"),
+                          fit: BoxFit.fill,
+                        ),
                       ),
                       height: height / 2.5,
                       width: width,

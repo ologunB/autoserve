@@ -13,6 +13,7 @@ dependencies:
   flutter_spinkit:
   country_pickers: ^1.2.0
   pin_code_fields: ^2.5.1
+  flutter_custom_clippers: ^1.1.0
 
 dev_dependencies:
   flutter_test:

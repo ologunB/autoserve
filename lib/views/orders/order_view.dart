@@ -1,3 +1,7 @@
+import 'package:autoserve/utils/styles.dart';
+import 'package:autoserve/views/orders/cancelled/cancelled_order.dart';
+import 'package:autoserve/views/orders/confirmed/confirmed_order.dart';
+import 'package:autoserve/views/orders/ongoing/ongoing_order.dart';
 import 'package:flutter/material.dart';
 
 class OrdersView extends StatefulWidget {
@@ -7,13 +11,71 @@ class OrdersView extends StatefulWidget {
   _OrdersViewState createState() => _OrdersViewState();
 }
 
-class _OrdersViewState extends State<OrdersView> {
+class _OrdersViewState extends State<OrdersView>
+    with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-          child: Text("Orders View",
-              style: TextStyle(fontSize: 44, fontWeight: FontWeight.w500))),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: Colors.white,
+          elevation: 1.0,
+          bottom: TabBar(
+              isScrollable: true,
+              unselectedLabelColor: Colors.grey[500],
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Styles.appPrimaryColor),
+              tabs: [
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Confirmed",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text("Ongoing",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text("Cancelled",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                  ),
+                ),
+              ]),
+          title: Text(
+            "My Orders",
+            style: TextStyle(
+                color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
+          ),
+          centerTitle: true,
+        ),
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          child: TabBarView(children: [
+            ConfirmedOrders(),
+            OngoingOrders(),
+            CancelledOrders()
+          ]),
+        ),
+      ),
     );
   }
 }

@@ -11,4 +11,9 @@ class Constants {
   static String userFullNameKey = "full_name";
   static String userAkaKey = "aka";
   static String userEmailKey = "email";
+  static String shortLoremText =
+      "Lorem ipsum dolor sit amet, mod tempor incididunt ut labore et dolore magna aliqua.  ";
+  static String longLoremText =
+      "Lorem ipsum dolor sit amet,  tempor incididu gna aliqua. Ut enim ad minim veniam, quis nostrud exercitation";
+  static List<String> userType = ["Car Owner", "Service Station"];
 }

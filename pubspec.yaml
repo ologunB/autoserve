@@ -11,6 +11,8 @@ dependencies:
 
   cupertino_icons: ^0.1.2
   flutter_spinkit:
+  country_pickers: ^1.2.0
+  pin_code_fields: ^2.5.1
 
 dev_dependencies:
   flutter_test:

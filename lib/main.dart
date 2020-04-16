@@ -1,3 +1,4 @@
+import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/auth/select_user_type.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AutoServe',
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Raleway'),
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          fontFamily: 'Raleway',
+          hintColor: Styles.commonDarkBackground),
       home: SelectUserType(),
     );
   }

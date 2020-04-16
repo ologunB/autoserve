@@ -5,25 +5,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class BottomWaveClipper extends CustomClipper<Path> {
+class MyCustomClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    var path = Path();
+    final path = Path();
+    path.lineTo(size.width, 0);
+    path.lineTo(size.width, size.height);
 
-    // Draw a straight line from current point to the bottom left corner.
-    path.lineTo(0.0, size.height);
-
-    // Draw a straight line from current point to the top right corner.
-    path.lineTo(size.width, 0.0);
-
-    // Draws a straight line from current point to the first point of the path.
-    // In this case (0, 0), since that's where the paths start by default.
+    path.lineTo(0, 0.0);
+    //   path.lineTo(size.width * 0.25, size.height);
     path.close();
-    return Path();
+    return path;
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+  bool shouldReclip(CustomClipper oldClipper) {
+    return false;
+  }
 }
 
 class SelectUserType extends StatefulWidget {
@@ -36,18 +34,42 @@ class _SelectUserTypeState extends State<SelectUserType> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
         body: SingleChildScrollView(
       child: Container(
-        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
+        height: height,
         child: Column(
           children: <Widget>[
             Container(
-              height: height / 2.5,
-              child: ClipPath(
-                child: Image.asset("assets/images/cc3.jpg",
-                    height: height / 2.5, fit: BoxFit.fill),
-                clipper: BottomWaveClipper(),
+              color: Colors.yellow,
+              child: Stack(
+                children: <Widget>[
+                  ClipPath(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/cc3.jpg"),
+                            fit: BoxFit.fill),
+                      ),
+                      height: height / 2.5,
+                      width: width,
+                    ),
+                    clipper: MyCustomClipper(),
+                  ),
+                  Positioned(
+                    child: Padding(
+                      padding: const EdgeInsets.all(28.0),
+                      child: Text(
+                        "GET STARTED",
+                        style: TextStyle(
+                            fontSize: 26, fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    bottom: 6,
+                  ),
+                ],
               ),
             ),
             Expanded(

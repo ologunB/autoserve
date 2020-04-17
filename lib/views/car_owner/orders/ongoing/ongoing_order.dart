@@ -20,7 +20,7 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                   CupertinoPageRoute(builder: (context) => OngoingStepper()));
             },
             child: Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.only(left: 8, right: 8, top: 8),
               color: Colors.white,
               child: Column(
                 children: <Widget>[
@@ -40,7 +40,7 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                           )),
                       Icon(
                         Icons.payment,
-                        color: Colors.red,
+                        color: Colors.blue,
                       ),
                       SizedBox(width: 10),
                       Text("₦5000",
@@ -101,7 +101,7 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.only(left: 8, right: 8, top: 8),
                     child: Divider(),
                   )
                 ],

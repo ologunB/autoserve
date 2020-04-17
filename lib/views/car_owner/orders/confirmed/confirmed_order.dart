@@ -20,7 +20,7 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                   CupertinoPageRoute(builder: (context) => OrderDetails()));
             },
             child: Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.only(left: 8, right: 8, top: 8),
               color: Colors.white,
               child: Column(
                 children: <Widget>[
@@ -28,19 +28,20 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Expanded(
-                          child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10.0),
-                        child: Text(
-                          "General Servicing",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.black),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: Text(
+                            "General Servicing",
+                            style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.black),
+                          ),
                         ),
-                      )),
+                      ),
                       Icon(
                         Icons.payment,
-                        color: Colors.red,
+                        color: Colors.blue,
                       ),
                       SizedBox(width: 10),
                       Text("₦5000",
@@ -73,7 +74,7 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.only(left: 8, right: 8, top: 8),
                     child: Divider(),
                   )
                 ],

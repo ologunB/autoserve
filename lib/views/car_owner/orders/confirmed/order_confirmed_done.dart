@@ -11,8 +11,11 @@ class _OrderConfirmedDoneState extends State<OrderConfirmedDone> {
   @override
   void initState() {
     Future.delayed(Duration(milliseconds: 3000)).then((val) {
-      Navigator.pushReplacement(context,
-          CupertinoPageRoute(builder: (context) => RateConfirmedOrder()));
+      Navigator.pushReplacement(
+          context,
+          CupertinoPageRoute(
+              builder: (context) => RateConfirmedOrder(),
+              fullscreenDialog: true));
     });
     super.initState();
   }

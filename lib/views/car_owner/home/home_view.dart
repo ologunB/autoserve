@@ -253,7 +253,7 @@ class _HomeViewState extends State<HomeView> {
                                         "FDA Car Service",
                                         style: TextStyle(
                                             fontSize: 20,
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w700,
                                             color: Colors.black),
                                       ),
                                       Text(

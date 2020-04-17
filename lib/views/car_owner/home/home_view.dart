@@ -16,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
       child: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -26,19 +26,19 @@ class _HomeViewState extends State<HomeView> {
                       child: Row(
                     children: <Widget>[
                       CircleAvatar(
-                        radius: 25,
+                        radius: 15,
                         backgroundColor: Colors.white,
                         child: Image.asset(
                           "assets/images/person.png",
                         ),
                       ),
-                      SizedBox(width: 10),
+                      SizedBox(width: 15),
                       Text(
                         "Hi, Mayowa",
                         style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
-                            fontWeight: FontWeight.w600),
+                            fontWeight: FontWeight.w500),
                       ),
                     ],
                   )),
@@ -50,7 +50,7 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 18.0, top: 18),
+                padding: const EdgeInsets.only(bottom: 8.0, top: 41.0),
                 child: Theme(
                     data: ThemeData(
                         primaryColor: Styles.commonDarkBackground,
@@ -75,8 +75,9 @@ class _HomeViewState extends State<HomeView> {
                                 hintText: 'What do you need done?',
                                 hintStyle: TextStyle(
                                     color: Colors.grey[500],
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 16,
+//                                    fontWeight: FontWeight.w400,
+                                ),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0),
                                 ),
@@ -107,7 +108,7 @@ class _HomeViewState extends State<HomeView> {
                       child: Text(
                     "Lagos, Nigeria",
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 12,
                         color: Colors.black,
                         fontWeight: FontWeight.w400),
                   )),
@@ -115,24 +116,25 @@ class _HomeViewState extends State<HomeView> {
                   Text(
                     "Open Map",
                     style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500),
+                        fontSize: 12,
+                        color: Color(0xFF595959),
+//                        fontWeight: FontWeight.w500,
+                    ),
                   )
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 18.0, top: 18),
+                padding: const EdgeInsets.only(bottom: 12.0, top: 26.0),
                 child: Text(
-                  "Popular Service",
+                  "Popular Services",
                   style: TextStyle(
                       fontSize: 20,
                       color: Colors.black,
-                      fontWeight: FontWeight.w600),
+                      fontWeight: FontWeight.w500),
                 ),
               ),
               Container(
-                height: 150,
+                height: 160,
                 width: 10000,
                 padding: EdgeInsets.all(5),
                 child: ListView.builder(
@@ -144,12 +146,12 @@ class _HomeViewState extends State<HomeView> {
                       padding: EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.greenAccent[100],
+                          color: Color(0xFFE4FCEA),
                           borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(15),
+                            bottomLeft: Radius.circular(5),
                             bottomRight: Radius.circular(5),
                             topLeft: Radius.circular(5),
-                            topRight: Radius.circular(15),
+                            topRight: Radius.circular(5),
                           ),
                         ),
                         child: FlatButton(
@@ -159,40 +161,41 @@ class _HomeViewState extends State<HomeView> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
+                              SizedBox(height: 12.0,),
                               Text(
                                 "₦2000",
                                 style: TextStyle(
-                                    fontSize: 26,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.green),
+                                    color: Color(0xFF1BD647)),
                               ),
                               SizedBox(height: 15),
                               Text(
                                 "Wheel Balancing",
                                 style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w300,
-                                    color: Colors.black),
+                                    color: Color(0xFF535461),),
                               ),
                               SizedBox(height: 7),
                               Padding(
                                 padding: EdgeInsets.only(top: 8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: Colors.lightGreen,
+                                    color: Color(0xFFBBF7C9),
                                     borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(15),
+                                      bottomLeft: Radius.circular(5),
                                       bottomRight: Radius.circular(5),
                                       topLeft: Radius.circular(5),
-                                      topRight: Radius.circular(15),
+                                      topRight: Radius.circular(5),
                                     ),
                                   ),
                                   padding: EdgeInsets.all(5),
                                   child: Text(
-                                    "2 Hrs",
+                                    "2 Hours",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 18,
+                                        color: Color(0xFF6B7C93),
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ),
@@ -206,17 +209,17 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 18.0, top: 18),
+                padding: const EdgeInsets.only(bottom: 18.0, top: 32),
                 child: Text(
                   "Recommended for you",
                   style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
+                      fontSize: 16,
+                      color: Color(0xFF595959),
                       fontWeight: FontWeight.w600),
                 ),
               ),
               Container(
-                height: 200,
+                height: 184,
                 width: 10000,
                 child: ListView.builder(
                   itemCount: typeList.length,
@@ -228,12 +231,12 @@ class _HomeViewState extends State<HomeView> {
                       child: Container(
                         width: 312,
                         decoration: BoxDecoration(
-                          color: Colors.lightBlueAccent[100],
+                          color: Color(0xFFE6F0FF),
                           borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(15),
-                            bottomRight: Radius.circular(5),
-                            topLeft: Radius.circular(5),
-                            topRight: Radius.circular(15),
+                            bottomLeft: Radius.circular(4),
+                            bottomRight: Radius.circular(4),
+                            topLeft: Radius.circular(4),
+                            topRight: Radius.circular(4),
                           ),
                         ),
                         child: FlatButton(
@@ -249,20 +252,23 @@ class _HomeViewState extends State<HomeView> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
+                                      SizedBox(height: 21.0,),
                                       Text(
                                         "FDA Car Service",
                                         style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w700,
-                                            color: Colors.black),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0xFF535461),),
                                       ),
+                                      SizedBox(height: 4.0,),
                                       Text(
                                         "Automobile Repair Station",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w300,
-                                            color: Colors.black),
+                                            color: Color(0xFF535461)),
                                       ),
+                                      SizedBox(height: 4.0,),
                                       Text(
                                         "4.6 Stars",
                                         style: TextStyle(
@@ -272,48 +278,50 @@ class _HomeViewState extends State<HomeView> {
                                       )
                                     ],
                                   ),
-                                  SizedBox(width: 5),
+                                  SizedBox(width: 70),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Icon(Icons.location_on),
+                                      Icon(Icons.location_on, color: Color(0xFF000000), size: 15.83,),
                                       Text(
                                         "800m",
                                         style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w600,
-                                            color: Colors.black),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0xFF535461),),
                                       )
                                     ],
                                   )
                                 ],
                               ),
+                              SizedBox(height: 12.0,),
                               Row(
                                 children: <Widget>[
                                   Text(
                                     "Open",
                                     style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w300,
-                                        color: Colors.green),
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0xFF1BD647),),
                                   ),
                                   SizedBox(width: 20),
                                   Text(
-                                    "8am - 5pm",
+                                    "9am - 6pm",
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w300,
-                                        color: Colors.black),
+                                        color: Color(0xFF535461)),
                                   ),
                                 ],
                               ),
+                              SizedBox(height: 16.0,),
                               Expanded(
                                 child: Text(
                                   Constants.shortLoremText,
                                   style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.black),
+                                      color: Color(0xFF535461),),
                                 ),
                               )
                             ],

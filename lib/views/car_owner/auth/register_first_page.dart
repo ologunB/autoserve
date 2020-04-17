@@ -229,77 +229,77 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                             builder: (context) => RegisterSecondPage()));
                   },
                 ),
-                Flexible(
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: RichText(
-                        textAlign: TextAlign.center,
-                        text: TextSpan(
-                            text: 'Already have an account? ',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: 'Log in',
-                                  style: TextStyle(
-                                      color: Colors.blue, fontSize: 18),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // navigate to desired screen
-                                    }),
-                            ]),
-                      ),
-                    ),
-                  ),
-                ),
-                Flexible(
-                    child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  //  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    RichText(
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
-                          text: "By signing up you agree to AutoServe's ",
+                          text: 'Already have an account? ',
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Terms and Condition',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.blue),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    // navigate to desired screen
-                                  }),
-                            TextSpan(
-                              text: ' and ',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey),
-                            ),
-                            TextSpan(
-                                text: 'Privacy Policy',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.blue),
+                                text: 'Log in',
+                                style:
+                                TextStyle(color: Colors.blue, fontSize: 18),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
                                     // navigate to desired screen
                                   }),
                           ]),
-                    )
-                  ],
-                ))
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    //  mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                            text: "By signing up you agree to AutoServe's ",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: 'Terms and Condition',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.blue),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      // navigate to desired screen
+                                    }),
+                              TextSpan(
+                                text: ' and ',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.grey),
+                              ),
+                              TextSpan(
+                                  text: 'Privacy Policy',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.blue),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      // navigate to desired screen
+                                    }),
+                            ]),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ),

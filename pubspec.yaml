@@ -25,7 +25,6 @@ flutter:
 
   assets:
   - assets/images/
-  #  - images/a_dot_ham.jpeg
 
   fonts:
     - family: Comfortaa

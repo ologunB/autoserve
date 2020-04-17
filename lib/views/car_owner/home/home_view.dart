@@ -1,6 +1,9 @@
 import 'package:autoserve/utils/constants.dart';
 import 'package:autoserve/utils/styles.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'home_map.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({Key key}) : super(key: key);
@@ -146,15 +149,18 @@ class _HomeViewState extends State<HomeView> {
                         decoration: BoxDecoration(
                           color: Colors.greenAccent[100],
                           borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(15),
-                            bottomRight: Radius.circular(5),
-                            topLeft: Radius.circular(5),
-                            topRight: Radius.circular(15),
+                            bottomLeft: Radius.circular(25),
+                            bottomRight: Radius.circular(10),
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(25),
                           ),
                         ),
                         child: FlatButton(
                           onPressed: () {
-                            setState(() {});
+                            Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                    builder: (context) => HomeMap()));
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -238,7 +244,10 @@ class _HomeViewState extends State<HomeView> {
                         ),
                         child: FlatButton(
                           onPressed: () {
-                            setState(() {});
+                            Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                    builder: (context) => HomeMap()));
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

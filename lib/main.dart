@@ -1,5 +1,5 @@
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/auth/select_user_type.dart';
+import 'package:autoserve/views/partials/select_user_type.dart';
 import 'package:flutter/material.dart';
 
 void main() {

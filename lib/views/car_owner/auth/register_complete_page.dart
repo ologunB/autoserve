@@ -15,7 +15,7 @@ class _RegisterCompleteScreenState extends State<RegisterCompleteScreen> {
       body: InkWell(
         onTap: () {
           Navigator.of(context).pushReplacement(
-              CupertinoPageRoute(builder: (context) => LayoutTemplate()));
+              MaterialPageRoute(builder: (context) => LayoutTemplate()));
         },
         child: Container(
           padding: EdgeInsets.all(20),

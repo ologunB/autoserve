@@ -1,29 +1,28 @@
 import 'package:autoserve/utils/constants.dart';
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/auth/register_first_page.dart';
+import 'package:autoserve/views/car_owner/auth/register_first_page.dart';
+import 'package:autoserve/views/service_station/auth/register_first_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class BottomWaveClipper extends CustomClipper<Path> {
+class MyCustomClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    var path = Path();
+    final path = Path();
+    path.lineTo(size.width, 0);
+    path.lineTo(size.width, size.height);
 
-    // Draw a straight line from current point to the bottom left corner.
-    path.lineTo(0.0, size.height);
-
-    // Draw a straight line from current point to the top right corner.
-    path.lineTo(size.width, 0.0);
-
-    // Draws a straight line from current point to the first point of the path.
-    // In this case (0, 0), since that's where the paths start by default.
+    path.lineTo(0, 0.0);
+    //   path.lineTo(size.width * 0.25, size.height);
     path.close();
-    return Path();
+    return path;
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+  bool shouldReclip(CustomClipper oldClipper) {
+    return false;
+  }
 }
 
 class SelectUserType extends StatefulWidget {
@@ -36,18 +35,44 @@ class _SelectUserTypeState extends State<SelectUserType> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
         body: SingleChildScrollView(
       child: Container(
-        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
+        height: height,
         child: Column(
           children: <Widget>[
             Container(
-              height: height / 2.5,
-              child: ClipPath(
-                child: Image.asset("assets/images/cc3.jpg",
-                    height: height / 2.5, fit: BoxFit.fill),
-                clipper: BottomWaveClipper(),
+              child: Stack(
+                children: <Widget>[
+                  ClipPath(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Styles.appPrimaryColor,
+                        backgroundBlendMode: BlendMode.color,
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/cc3.jpg"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      height: height / 2.5,
+                      width: width,
+                    ),
+                    clipper: MyCustomClipper(),
+                  ),
+                  Positioned(
+                    child: Padding(
+                      padding: const EdgeInsets.all(28.0),
+                      child: Text(
+                        "GET STARTED",
+                        style: TextStyle(
+                            fontSize: 26, fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    bottom: 6,
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -117,58 +142,66 @@ class _SelectUserTypeState extends State<SelectUserType> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 18.0, left: 10, right: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Styles.appCanvasColor,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                          boxShadow: [
-                            BoxShadow(blurRadius: 12, color: Colors.grey[300])
-                          ]),
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),
-                              child: Icon(Icons.directions_boat,
-                                  color: Styles.appPrimaryColor),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => RegisterMechFirstPage()));
+                    },
+                    child: Padding(
+                      padding:
+                      const EdgeInsets.only(top: 18.0, left: 10, right: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Styles.appCanvasColor,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
                             ),
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  Constants.userType[1],
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w700,
-                                      color: Styles.appPrimaryColor),
+                            boxShadow: [
+                              BoxShadow(blurRadius: 12, color: Colors.grey[300])
+                            ]),
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(25)),
                                 ),
-                                Text(
-                                  Constants.shortLoremText,
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400,
-                                      color: Styles.appPrimaryColor),
-                                )
-                              ],
+                                child: Icon(Icons.directions_boat,
+                                    color: Styles.appPrimaryColor),
+                              ),
                             ),
-                          )
-                        ],
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    Constants.userType[1],
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w700,
+                                        color: Styles.appPrimaryColor),
+                                  ),
+                                  Text(
+                                    Constants.shortLoremText,
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Styles.appPrimaryColor),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                        ),
                       ),
                     ),
                   ),

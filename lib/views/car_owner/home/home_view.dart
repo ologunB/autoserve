@@ -26,11 +26,12 @@ class _HomeViewState extends State<HomeView> {
                       child: Row(
                     children: <Widget>[
                       CircleAvatar(
-                          radius: 25,
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            "assets/images/engineer.png",
-                          )),
+                        radius: 25,
+                        backgroundColor: Colors.white,
+                        child: Image.asset(
+                          "assets/images/person.png",
+                        ),
+                      ),
                       SizedBox(width: 10),
                       Text(
                         "Hi, Mayowa",

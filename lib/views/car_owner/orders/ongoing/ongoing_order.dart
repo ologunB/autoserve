@@ -20,7 +20,7 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                   CupertinoPageRoute(builder: (context) => OngoingStepper()));
             },
             child: Container(
-              padding: EdgeInsets.only(left: 8, right: 8, top: 8),
+              padding: EdgeInsets.only(left: 8, right: 8, top: 29),
               color: Colors.white,
               child: Column(
                 children: <Widget>[
@@ -28,16 +28,17 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10.0),
-                            child: Text(
-                              "General Servicing",
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.black),
-                            ),
-                          )),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: Text(
+                            "General Servicing",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ),
                       Icon(
                         Icons.payment,
                         color: Colors.blue,
@@ -52,13 +53,16 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                   ),
                   Row(
                     children: <Widget>[
-                      Icon(Icons.directions_boat),
+                      Icon(Icons.ev_station),
                       SizedBox(width: 10),
-                      Text("FDA Services",
-                          style: TextStyle(
-                              fontSize: 19,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.black))
+                      Text(
+                        "FDA Services",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black,
+                        ),
+                      )
                     ],
                   ),
                   Row(
@@ -67,12 +71,15 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                         child: Row(
                           children: <Widget>[
                             Icon(Icons.date_range),
-                            SizedBox(width: 10),
-                            Text("16th April 2020 (8:45PM)",
-                                style: TextStyle(
-                                    fontSize: 19,
-                                    fontWeight: FontWeight.w300,
-                                    color: Colors.red))
+                            SizedBox(width: 12.36),
+                            Text(
+                              "Ongoing",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w300,
+                                color: Color(0xFF595959),
+                              ),
+                            )
                           ],
                         ),
                       ),
@@ -80,20 +87,20 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                         padding: EdgeInsets.only(top: 8.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.redAccent[100].withAlpha(111),
+                            color: Color(0XFFFFF0F1).withAlpha(111),
                             borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(15),
-                              bottomRight: Radius.circular(5),
-                              topLeft: Radius.circular(5),
-                              topRight: Radius.circular(15),
+                              bottomLeft: Radius.circular(4),
+                              bottomRight: Radius.circular(4),
+                              topLeft: Radius.circular(4),
+                              topRight: Radius.circular(4),
                             ),
                           ),
                           padding: EdgeInsets.all(5),
                           child: Text(
                             "Cancel",
                             style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 18,
+                                color: Color(0xFFEB001B),
+                                fontSize: 12,
                                 fontWeight: FontWeight.w600),
                           ),
                         ),

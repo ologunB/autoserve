@@ -29,40 +29,55 @@ class _OrdersViewState extends State<OrdersView>
               unselectedLabelColor: Colors.grey[500],
               indicatorSize: TabBarIndicatorSize.tab,
               indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(4),
                   color: Styles.appPrimaryColor),
               tabs: [
                 Tab(
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
-                      "Confirmed",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      "Completed",
+                      style: TextStyle(
+//                        color: Color(0xFFFFFFFF),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
                 Tab(
                   child: Align(
                     alignment: Alignment.center,
-                    child: Text("Ongoing",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    child: Text(
+                      "Ongoing",
+                      style: TextStyle(
+//                        color: Color(0xFFFFFFFF),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Tab(
                   child: Align(
                     alignment: Alignment.center,
-                    child: Text("Cancelled",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    child: Text(
+                      "Cancelled",
+                      style: TextStyle(
+//                        color: Color(0xFFFFFFFF),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
               ]),
           title: Text(
             "My Orders",
             style: TextStyle(
-                color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
+                color: Color(0xFF595959),
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),

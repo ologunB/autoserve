@@ -112,7 +112,11 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                         ),
                       ),
                     ),
-                    CustomButton(title: "Submit", onPress: () {})
+                    CustomButton(
+                        title: "Submit",
+                        onPress: () {
+                          Navigator.pop(context);
+                        })
                   ],
                 ))
           ],

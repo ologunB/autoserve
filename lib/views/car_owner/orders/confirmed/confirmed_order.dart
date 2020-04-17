@@ -1,6 +1,7 @@
-import 'package:autoserve/views/car_owner/orders/confirmed/rate_confirmed_order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'order_details.dart';
 
 class ConfirmedOrders extends StatefulWidget {
   @override
@@ -15,10 +16,8 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => RateConfirmedOrder()));
+              Navigator.push(context,
+                  CupertinoPageRoute(builder: (context) => OrderDetails()));
             },
             child: Container(
               padding: EdgeInsets.all(8),

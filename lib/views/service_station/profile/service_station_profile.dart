@@ -13,15 +13,15 @@ class ServiceStationProfile extends StatefulWidget {
 class _ServiceStationProfileState extends State<ServiceStationProfile> {
   Widget chip(String label) {
     return Chip(
-      labelPadding: EdgeInsets.all(5.0),
+      labelPadding: EdgeInsets.all(4.0),
       label: Text(
         label,
         style: TextStyle(
             color: Styles.appPrimaryColor,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w300),
       ),
-      backgroundColor: Colors.blue[50],
+      backgroundColor: Colors.grey[200],
       elevation: 2.0,
       shadowColor: Colors.grey[60],
       padding: EdgeInsets.all(2.0),
@@ -52,12 +52,14 @@ class _ServiceStationProfileState extends State<ServiceStationProfile> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
+/*
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
                       "assets/images/cc6.jpg",
                     ),
                     fit: BoxFit.fitWidth)),
+*/
             height: height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,9 +253,10 @@ class _ServiceStationProfileState extends State<ServiceStationProfile> {
                         color: Colors.black),
                   ),
                 ),
-                Padding(
+                Container(
+                  height: 100,
                   padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
+                  const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                   child: wrapWidget(services),
                 ),
                 Padding(
@@ -284,3 +287,11 @@ class _ServiceStationProfileState extends State<ServiceStationProfile> {
     );
   }
 }
+
+/*
+Container(
+height: 100,
+padding:
+const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
+child: wrapWidget(services),
+),*/

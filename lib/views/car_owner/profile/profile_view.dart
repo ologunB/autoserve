@@ -22,9 +22,13 @@ class _ProfileViewState extends State<ProfileView> {
                   padding: const EdgeInsets.all(10.0),
                   child: CircleAvatar(
                     radius: 40,
-                    backgroundColor: Colors.grey,
+                    backgroundImage: AssetImage(
+                      "assets/images/person.png",
+                    ),
+                    backgroundColor: Colors.grey[100],
                     child: Image.asset(
                       "assets/images/person.png",
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
@@ -88,7 +92,7 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.edit),
+                        child: Icon(Icons.rss_feed),
                       ),
                       Expanded(
                         child: Padding(

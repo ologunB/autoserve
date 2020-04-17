@@ -39,8 +39,8 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
               padding: const EdgeInsets.all(18.0),
               child: Text("Thank You",
                   style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w300,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
                       color: Colors.black)),
             ),
             Text("Your feedback help us serve you better",
@@ -50,9 +50,10 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
               padding: const EdgeInsets.all(10.0),
               child: CircleAvatar(
                 radius: 35,
-                backgroundColor: Colors.grey,
+                backgroundColor: Colors.grey[100],
                 child: Image.asset(
                   "assets/images/person.png",
+                  fit: BoxFit.contain,
                 ),
               ),
             ),

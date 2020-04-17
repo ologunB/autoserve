@@ -51,7 +51,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
               "+${country.phoneCode} ",
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 22,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400),
             ),
           ],
@@ -74,7 +74,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                   "Step 1/2",
                   style: TextStyle(
                       color: Styles.appPrimaryColor,
-                      fontSize: 22,
+                      fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),
               ),
@@ -94,18 +94,18 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 24,
-                      fontWeight: FontWeight.w900),
+                      fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 24),
                 Text(
                   "It takes just a minute to set up your account and start requestig for auto repair services",
                   style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
                       color: Colors.grey),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 18.0),
+                  padding: const EdgeInsets.only(top: 18.0),
                   child: Theme(
                     data: ThemeData(
                         primaryColor: Styles.commonDarkBackground,
@@ -114,12 +114,13 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                       decoration: InputDecoration(
                           fillColor: Styles.commonDarkBackground,
                           filled: true,
-                          contentPadding: EdgeInsets.all(10),
+                          contentPadding: EdgeInsets.all(10.0),
                           hintText: 'Full Name',
                           hintStyle: TextStyle(
-                              color: Colors.grey[500],
-                              fontSize: 22,
-                              fontWeight: FontWeight.w400),
+                            color: Colors.grey[500],
+                            fontSize: 16,
+//                            fontWeight: FontWeight.w400,
+                          ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                           )),
@@ -131,7 +132,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 18.0),
+                  padding: const EdgeInsets.only(top: 24.0),
                   child: Theme(
                     data: ThemeData(
                         primaryColor: Styles.commonDarkBackground,
@@ -143,9 +144,10 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                           contentPadding: EdgeInsets.all(10),
                           hintText: 'Email',
                           hintStyle: TextStyle(
-                              color: Colors.grey[500],
-                              fontSize: 22,
-                              fontWeight: FontWeight.w400),
+                            color: Colors.grey[500],
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                          ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                           )),
@@ -157,7 +159,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 18.0),
+                  padding: const EdgeInsets.only(top: 24.0),
                   child: Container(
                     color: Styles.commonDarkBackground,
                     padding: EdgeInsets.only(left: 10),
@@ -177,7 +179,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                                 hintText: '(555) 555 555',
                                 hintStyle: TextStyle(
                                     color: Colors.grey[500],
-                                    fontSize: 22,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.w400),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0),
@@ -195,7 +197,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 18.0),
+                  padding: const EdgeInsets.only(top: 24.0),
                   child: Theme(
                     data: ThemeData(
                         primaryColor: Styles.commonDarkBackground,
@@ -220,6 +222,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                     ),
                   ),
                 ),
+                SizedBox(height: 24.0,),
                 CustomButton(
                   title: "Continue",
                   onPress: () {
@@ -265,14 +268,14 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                       text: TextSpan(
                           text: "By signing up you agree to AutoServe's ",
                           style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 12,
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
                           children: <TextSpan>[
                             TextSpan(
                                 text: 'Terms and Condition',
                                 style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.blue),
                                 recognizer: TapGestureRecognizer()
@@ -282,14 +285,14 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                             TextSpan(
                               text: ' and ',
                               style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.grey),
                             ),
                             TextSpan(
                                 text: 'Privacy Policy',
                                 style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.blue),
                                 recognizer: TapGestureRecognizer()

@@ -67,7 +67,7 @@ class _SelectUserTypeState extends State<SelectUserType> {
                       child: Text(
                         "GET STARTED",
                         style: TextStyle(
-                            fontSize: 26, fontWeight: FontWeight.w600),
+                            fontSize: 14, fontWeight: FontWeight.w600),
                       ),
                     ),
                     bottom: 6,
@@ -88,7 +88,7 @@ class _SelectUserTypeState extends State<SelectUserType> {
                     },
                     child: Padding(
                       padding:
-                          const EdgeInsets.only(top: 8.0, left: 10, right: 10),
+                          const EdgeInsets.only(top: 24.0, left: 16, right: 16),
                       child: Container(
                         decoration: BoxDecoration(
                             color: Styles.appPrimaryColor,
@@ -122,15 +122,16 @@ class _SelectUserTypeState extends State<SelectUserType> {
                                   Text(
                                     Constants.userType[0],
                                     style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
                                         color: Styles.appCanvasColor),
                                   ),
+                                  SizedBox(height: 8,),
                                   Text(
                                     Constants.shortLoremText,
                                     style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
                                         color: Styles.appCanvasColor),
                                   )
                                 ],
@@ -151,7 +152,7 @@ class _SelectUserTypeState extends State<SelectUserType> {
                     },
                     child: Padding(
                       padding:
-                      const EdgeInsets.only(top: 18.0, left: 10, right: 10),
+                      const EdgeInsets.only(top: 24.0, left: 16, right: 16),
                       child: Container(
                         decoration: BoxDecoration(
                             color: Styles.appCanvasColor,
@@ -174,7 +175,7 @@ class _SelectUserTypeState extends State<SelectUserType> {
                                   borderRadius:
                                   BorderRadius.all(Radius.circular(25)),
                                 ),
-                                child: Icon(Icons.directions_boat,
+                                child: Icon(Icons.ev_station,
                                     color: Styles.appPrimaryColor),
                               ),
                             ),
@@ -185,14 +186,15 @@ class _SelectUserTypeState extends State<SelectUserType> {
                                   Text(
                                     Constants.userType[1],
                                     style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
                                         color: Styles.appPrimaryColor),
                                   ),
+                                  SizedBox(height: 8,),
                                   Text(
                                     Constants.shortLoremText,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w400,
                                         color: Styles.appPrimaryColor),
                                   )
@@ -207,20 +209,20 @@ class _SelectUserTypeState extends State<SelectUserType> {
                   ),
                   Flexible(
                     child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(top: 12.0),
                       child: RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
                             text: 'Already have an account? ',
                             style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 12,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.grey),
                             children: <TextSpan>[
                               TextSpan(
                                   text: 'Log in',
                                   style: TextStyle(
-                                      color: Colors.blue, fontSize: 18),
+                                      color: Colors.blue, fontSize: 12),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       // navigate to desired screen
@@ -229,6 +231,7 @@ class _SelectUserTypeState extends State<SelectUserType> {
                       ),
                     ),
                   ),
+                  Spacer(),
                   Flexible(
                       child: Container(
                     child: Column(
@@ -240,14 +243,14 @@ class _SelectUserTypeState extends State<SelectUserType> {
                           text: TextSpan(
                               text: "By signing up you agree to AutoServe's ",
                               style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.grey),
                               children: <TextSpan>[
                                 TextSpan(
                                     text: 'Terms and Condition',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w400,
                                         color: Colors.blue),
                                     recognizer: TapGestureRecognizer()
@@ -257,14 +260,14 @@ class _SelectUserTypeState extends State<SelectUserType> {
                                 TextSpan(
                                   text: ' and ',
                                   style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.grey),
                                 ),
                                 TextSpan(
                                     text: 'Privacy Policy',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w400,
                                         color: Colors.blue),
                                     recognizer: TapGestureRecognizer()

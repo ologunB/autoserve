@@ -28,10 +28,7 @@ class _OrderDetailsState extends State<OrderDetails> {
         child: Container(
           color: Colors.white,
           padding: EdgeInsets.all(10),
-          width: MediaQuery
-              .of(context)
-              .size
-              .width,
+          width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -41,9 +38,9 @@ class _OrderDetailsState extends State<OrderDetails> {
                 padding: const EdgeInsets.all(10.0),
                 child: CircleAvatar(
                   radius: 40,
-                  backgroundImage: AssetImage(
-                    "assets/images/person.png",
-                  ),
+//                  backgroundImage: AssetImage(
+//                    "assets/images/person.png",
+//                  ),
                   backgroundColor: Colors.grey[100],
                   child: Image.asset(
                     "assets/images/person.png",
@@ -51,7 +48,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   ),
                 ),
               ),
-              Text("Mercedes e450",
+              Text("Mercedes e350",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 20,
@@ -62,15 +59,15 @@ class _OrderDetailsState extends State<OrderDetails> {
                 children: <Widget>[
                   Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10.0),
-                        child: Text(
-                          "General Servicing",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black),
-                        ),
-                      )),
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: Text(
+                      "General Servicing",
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
+                    ),
+                  )),
                   Icon(
                     Icons.payment,
                     color: Colors.blue,
@@ -88,12 +85,12 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Expanded(
                     child: Row(
                       children: <Widget>[
-                        Icon(Icons.directions_boat),
-                        SizedBox(width: 10),
+                        Icon(Icons.ev_station),
+                        SizedBox(width: 12.36),
                         Text(
                           "FDA Services",
                           style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w300,
                               color: Colors.black),
                         ),
@@ -104,20 +101,20 @@ class _OrderDetailsState extends State<OrderDetails> {
                     padding: EdgeInsets.only(top: 8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.blue[100].withAlpha(111),
+                        color: Color(0xFFE2E0FF).withAlpha(111),
                         borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(15),
-                          bottomRight: Radius.circular(5),
-                          topLeft: Radius.circular(5),
-                          topRight: Radius.circular(15),
+                          bottomLeft: Radius.circular(4),
+                          bottomRight: Radius.circular(4),
+                          topLeft: Radius.circular(4),
+                          topRight: Radius.circular(4),
                         ),
                       ),
                       padding: EdgeInsets.all(5),
                       child: Text(
                         "Map Location",
                         style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 18,
+                            color: Color(0xFF6C63FF),
+                            fontSize: 12,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -127,22 +124,25 @@ class _OrderDetailsState extends State<OrderDetails> {
               Row(
                 children: <Widget>[
                   Icon(Icons.date_range),
-                  SizedBox(width: 10),
-                  Text("16th April 2020 (8:45)",
-                      style: TextStyle(
-                          fontSize: 19,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.black))
+                  SizedBox(width: 12.36),
+                  Text(
+                    "16th April 2020 (8:45)",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.black,
+                    ),
+                  )
                 ],
               ),
               Row(
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    padding: const EdgeInsets.only(top: 48, bottom: 15.0),
                     child: Text(
                       "Services",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 16,
                           fontWeight: FontWeight.w600,
                           color: Colors.black),
                     ),
@@ -164,18 +164,21 @@ class _OrderDetailsState extends State<OrderDetails> {
                             decoration: BoxDecoration(
                               color: Colors.grey[300],
                               borderRadius:
-                              BorderRadius.all(Radius.circular(25)),
+                                  BorderRadius.all(Radius.circular(25)),
                             ),
                             child: Icon(Icons.directions_car,
                                 color: Styles.appCanvasColor),
                           ),
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Text(
                           "General Servicing",
                           style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500),
+                              fontSize: 14,
+                              color: Color(0xFF535461),
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -184,7 +187,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     "₦10,000",
                     textAlign: TextAlign.right,
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: Colors.grey),
                   )
@@ -193,7 +196,9 @@ class _OrderDetailsState extends State<OrderDetails> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Divider(),
+                child: Divider(
+                  thickness: 2.0,
+                ),
               ),
               Row(
                 children: <Widget>[
@@ -201,7 +206,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     child: Text(
                       "Subtotal",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 14,
                           color: Colors.grey,
                           fontWeight: FontWeight.w500),
                     ),
@@ -210,12 +215,15 @@ class _OrderDetailsState extends State<OrderDetails> {
                     "₦10,000",
                     textAlign: TextAlign.right,
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: Colors.grey),
                   )
                 ],
                 crossAxisAlignment: CrossAxisAlignment.center,
+              ),
+              SizedBox(
+                height: 20.0,
               ),
               Row(
                 children: <Widget>[
@@ -223,21 +231,24 @@ class _OrderDetailsState extends State<OrderDetails> {
                     child: Text(
                       "Promo/Discount",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 14,
                           color: Colors.grey,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
                   Text(
-                    "₦ -",
+                    "-",
                     textAlign: TextAlign.right,
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: Colors.grey),
                   )
                 ],
                 crossAxisAlignment: CrossAxisAlignment.center,
+              ),
+              SizedBox(
+                height: 20.0,
               ),
               Row(
                 children: <Widget>[
@@ -245,7 +256,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     child: Text(
                       "Order total",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 14,
                           color: Colors.black,
                           fontWeight: FontWeight.w500),
                     ),
@@ -254,7 +265,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     "₦10,000",
                     textAlign: TextAlign.right,
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: Colors.black),
                   )
@@ -273,7 +284,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                       child: Text(
                         "Your Review",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                       ),
@@ -285,10 +296,10 @@ class _OrderDetailsState extends State<OrderDetails> {
                       decoration: BoxDecoration(
                         color: Colors.blue[100].withAlpha(111),
                         borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(15),
-                          bottomRight: Radius.circular(5),
-                          topLeft: Radius.circular(5),
-                          topRight: Radius.circular(15),
+                          bottomLeft: Radius.circular(4),
+                          bottomRight: Radius.circular(4),
+                          topLeft: Radius.circular(4),
+                          topRight: Radius.circular(4),
                         ),
                       ),
                       padding: EdgeInsets.all(5),
@@ -296,7 +307,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                         " Edit ",
                         style: TextStyle(
                             color: Colors.blue,
-                            fontSize: 18,
+                            fontSize: 12,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -307,27 +318,29 @@ class _OrderDetailsState extends State<OrderDetails> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SmoothStarRating(
-                    allowHalfRating: true,
-                    onRatingChanged: (v) {
-                      setState(() {});
-                    },
-                    starCount: 5,
-                    rating: 4,
-                    size: 40.0,
-                    filledIconData: Icons.star,
-                    halfFilledIconData: Icons.star_half,
-                    color: Colors.yellow,
-                    borderColor: Colors.yellow,
-                    spacing: 0.0),
+                  allowHalfRating: true,
+                  onRatingChanged: (v) {
+                    setState(() {});
+                  },
+                  starCount: 5,
+                  rating: 4,
+                  size: 40.0,
+                  filledIconData: Icons.star,
+                  halfFilledIconData: Icons.star_half,
+                  color: Colors.yellow,
+                  borderColor: Colors.yellow,
+                  spacing: 0.0,
+                ),
               ),
               Text(
                 Constants.shortLoremText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey,
+                    fontSize: 14,
+                    color: Color(0xFF535461),
                     fontWeight: FontWeight.w500),
               ),
+              SizedBox(height: 24.0,),
               CustomButton(title: "Rebook this Service", onPress: () {})
             ],
           ),

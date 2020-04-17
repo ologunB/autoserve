@@ -87,7 +87,7 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                         padding: EdgeInsets.only(top: 8.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0XFFFFF0F1).withAlpha(111),
+                            color: Color(0XFFFFF0F1),
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(4),
                               bottomRight: Radius.circular(4),

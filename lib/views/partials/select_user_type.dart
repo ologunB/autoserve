@@ -1,6 +1,7 @@
 import 'package:autoserve/utils/constants.dart';
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/auth/register_first_page.dart';
+import 'package:autoserve/views/car_owner/auth/register_first_page.dart';
+import 'package:autoserve/views/service_station/auth/register_first_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -141,58 +142,66 @@ class _SelectUserTypeState extends State<SelectUserType> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 18.0, left: 10, right: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Styles.appCanvasColor,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                          boxShadow: [
-                            BoxShadow(blurRadius: 12, color: Colors.grey[300])
-                          ]),
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),
-                              child: Icon(Icons.directions_boat,
-                                  color: Styles.appPrimaryColor),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => RegisterMechFirstPage()));
+                    },
+                    child: Padding(
+                      padding:
+                      const EdgeInsets.only(top: 18.0, left: 10, right: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Styles.appCanvasColor,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
                             ),
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  Constants.userType[1],
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w700,
-                                      color: Styles.appPrimaryColor),
+                            boxShadow: [
+                              BoxShadow(blurRadius: 12, color: Colors.grey[300])
+                            ]),
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(25)),
                                 ),
-                                Text(
-                                  Constants.shortLoremText,
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400,
-                                      color: Styles.appPrimaryColor),
-                                )
-                              ],
+                                child: Icon(Icons.directions_boat,
+                                    color: Styles.appPrimaryColor),
+                              ),
                             ),
-                          )
-                        ],
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    Constants.userType[1],
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w700,
+                                        color: Styles.appPrimaryColor),
+                                  ),
+                                  Text(
+                                    Constants.shortLoremText,
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Styles.appPrimaryColor),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                        ),
                       ),
                     ),
                   ),

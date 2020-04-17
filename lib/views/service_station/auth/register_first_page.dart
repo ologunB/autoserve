@@ -1,6 +1,6 @@
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/auth/register_second_page.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
+import 'package:autoserve/views/service_station/auth/register_second_page.dart';
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dropdown.dart';
 import 'package:country_pickers/utils/utils.dart';
@@ -8,12 +8,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class RegisterFirstPage extends StatefulWidget {
+class RegisterMechFirstPage extends StatefulWidget {
   @override
-  _RegisterFirstPageState createState() => _RegisterFirstPageState();
+  _RegisterMechFirstPageState createState() => _RegisterMechFirstPageState();
 }
 
-class _RegisterFirstPageState extends State<RegisterFirstPage> {
+class _RegisterMechFirstPageState extends State<RegisterMechFirstPage> {
   _buildCountryPickerDropdown(
           {bool filtered = false,
           bool sortedByIsoCode = false,
@@ -57,6 +57,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
           ],
         ),
       );
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -71,7 +72,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "Step 1/2",
+                  "Step 1/5",
                   style: TextStyle(
                       color: Styles.appPrimaryColor,
                       fontSize: 22,
@@ -115,7 +116,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                           fillColor: Styles.commonDarkBackground,
                           filled: true,
                           contentPadding: EdgeInsets.all(10),
-                          hintText: 'Full Name',
+                          hintText: 'Service Station Name',
                           hintStyle: TextStyle(
                               color: Colors.grey[500],
                               fontSize: 22,
@@ -226,7 +227,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => RegisterSecondPage()));
+                            builder: (context) => RegisterMechSecondPage()));
                   },
                 ),
                 Flexible(

@@ -1,5 +1,5 @@
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/auth/register_complete_page.dart';
+import 'package:autoserve/views/car_owner/auth/register_complete_page.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +61,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                 child: PinCodeTextField(
                   length: 5,
                   obsecureText: false,
+                  inactiveColor: Colors.grey,
                   animationType: AnimationType.fade,
                   textInputType: TextInputType.numberWithOptions(),
                   shape: PinCodeFieldShape.box,

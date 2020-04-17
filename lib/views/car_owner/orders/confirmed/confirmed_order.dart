@@ -1,4 +1,4 @@
-import 'package:autoserve/views/orders/confirmed/rate_confirmed_order.dart';
+import 'package:autoserve/views/car_owner/orders/confirmed/rate_confirmed_order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

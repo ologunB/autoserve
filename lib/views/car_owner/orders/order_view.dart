@@ -1,7 +1,7 @@
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/orders/cancelled/cancelled_order.dart';
-import 'package:autoserve/views/orders/confirmed/confirmed_order.dart';
-import 'package:autoserve/views/orders/ongoing/ongoing_order.dart';
+import 'package:autoserve/views/car_owner/orders/cancelled/cancelled_order.dart';
+import 'package:autoserve/views/car_owner/orders/confirmed/confirmed_order.dart';
+import 'package:autoserve/views/car_owner/orders/ongoing/ongoing_order.dart';
 import 'package:flutter/material.dart';
 
 class OrdersView extends StatefulWidget {

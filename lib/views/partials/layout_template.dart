@@ -1,8 +1,8 @@
 import 'package:autoserve/utils/styles.dart';
-import 'package:autoserve/views/home/home_view.dart';
-import 'package:autoserve/views/orders/order_view.dart';
-import 'package:autoserve/views/payment/payment_view.dart';
-import 'package:autoserve/views/profile/profile_view.dart';
+import 'package:autoserve/views/car_owner/home/home_view.dart';
+import 'package:autoserve/views/car_owner/orders/order_view.dart';
+import 'package:autoserve/views/car_owner/payment/payment_view.dart';
+import 'package:autoserve/views/car_owner/profile/profile_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

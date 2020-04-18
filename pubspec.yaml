@@ -28,14 +28,6 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   fonts:
-    - family: Comfortaa
-      fonts:
-        - asset: assets/fonts/Comfortaa_Regular.ttf
-
-    - family: Raleway
-      fonts:
-        - asset: assets/fonts/Raleway-Regular.ttf
-
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf

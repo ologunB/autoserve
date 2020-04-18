@@ -238,7 +238,7 @@ class _ProfileViewState extends State<ProfileView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(
-                          Icons.,
+                          Icons.reply,
                           color: Color(0xFF979797),
                         ),
                       ),

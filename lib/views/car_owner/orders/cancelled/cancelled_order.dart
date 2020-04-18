@@ -54,7 +54,7 @@ class _CancelledOrdersState extends State<CancelledOrders> {
                       "FDA Services",
                       style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w500,
                         color: Color(0xFF595959),
                       ),
                     )
@@ -68,7 +68,7 @@ class _CancelledOrdersState extends State<CancelledOrders> {
                       "Cancelled",
                       style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w500,
                         color: Color(0xFFEB001B),
                       ),
                     )

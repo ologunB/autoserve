@@ -1,5 +1,6 @@
 import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -10,7 +11,7 @@ class RateConfirmedOrder extends StatefulWidget {
 
 class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
   double ratingNum = 1;
-  bool makeVisble = false;
+  bool makeCommentVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,10 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: Colors.grey),
       ),
-      body: SingleChildScrollView(
-        child: Container(
+      body: ListView(children: [
+        Container(
           color: Colors.white,
+          alignment: Alignment.center,
           height: MediaQuery
               .of(context)
               .size
@@ -30,6 +32,7 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Text("16th April 2020 (8:45PM)",
                   style: TextStyle(
@@ -57,9 +60,8 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                 child: CircleAvatar(
                   radius: 35,
                   backgroundColor: Colors.grey[100],
-                  child: Image.asset(
+                  backgroundImage: AssetImage(
                     "assets/images/person.png",
-                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -73,7 +75,7 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                     onRatingChanged: (v) {
                       ratingNum = v;
                       setState(() {
-                        makeVisble = true;
+                        makeCommentVisible = true;
                       });
                     },
                     starCount: 5,
@@ -86,7 +88,7 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                     spacing: 0.0),
               ),
               Visibility(
-                  visible: makeVisble,
+                  visible: makeCommentVisible,
                   child: Column(
                     children: <Widget>[
                       Text(
@@ -131,8 +133,8 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                   ))
             ],
           ),
-        ),
-      ),
+        )
+      ]),
     );
   }
 }

@@ -81,9 +81,8 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
             )
           ],
         ),
-        body: SingleChildScrollView(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
+        body: ListView(children: [
+          Container(
             padding: EdgeInsets.all(10),
             color: Colors.white,
             child: Column(
@@ -303,8 +302,8 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                 )
               ],
             ),
-          ),
-        ),
+          )
+        ]),
       ),
     );
   }

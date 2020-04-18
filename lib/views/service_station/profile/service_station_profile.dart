@@ -58,7 +58,6 @@ class _ServiceStationProfileState extends State<ServiceStationProfile> {
                     "assets/images/cc6.jpg",
                   ),
                   fit: BoxFit.fitWidth)),
-          height: height,
           child: ListView(
             //crossAxisAlignment: CrossAxisAlignment.start,
             //  mainAxisSize: MainAxisSize.max,

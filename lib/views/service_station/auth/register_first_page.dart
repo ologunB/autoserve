@@ -51,7 +51,7 @@ class _RegisterMechFirstPageState extends State<RegisterMechFirstPage> {
               "+${country.phoneCode} ",
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: FontWeight.w400),
             ),
           ],
@@ -82,9 +82,8 @@ class _RegisterMechFirstPageState extends State<RegisterMechFirstPage> {
             )
           ],
         ),
-        body: SingleChildScrollView(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
+        body: ListView(children: [
+          Container(
             padding: EdgeInsets.all(10),
             color: Colors.white,
             child: Column(
@@ -305,7 +304,7 @@ class _RegisterMechFirstPageState extends State<RegisterMechFirstPage> {
               ],
             ),
           ),
-        ),
+        ]),
       ),
     );
   }

@@ -27,10 +27,9 @@ class _PaymentMethodState extends State<SelectPaymentMethod> {
                 color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
           ),
         ),
-        body: SingleChildScrollView(
-          child: Container(
+        body: ListView(children: [
+          Container(
             padding: EdgeInsets.all(18),
-            height: MediaQuery.of(context).size.height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -176,8 +175,8 @@ class _PaymentMethodState extends State<SelectPaymentMethod> {
                     })
               ],
             ),
-          ),
-        ),
+          )
+        ]),
       ),
     );
   }

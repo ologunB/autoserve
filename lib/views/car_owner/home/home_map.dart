@@ -75,7 +75,7 @@ class _HomeMapState extends State<HomeMap> {
                   onMapCreated: _onMapCreated,
                   initialCameraPosition: CameraPosition(
                     target: _center,
-                    zoom: 5.0,
+                    zoom: 35.0,
                   ),
                   markers: Set<Marker>.of(markers),
                 ),

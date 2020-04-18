@@ -154,21 +154,20 @@ class _CustomerCarDetailsState extends State<CustomerCarDetails> {
                   mainAxisAlignment: MainAxisAlignment.start,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: CustomButton(
-                    title: "Book",
-                    onPress: () {
-                      Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                            builder: (context) => SelectService()),
-                      );
-                    }),
-              )
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        child: CustomButton(
+            title: "Book",
+            onPress: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (context) => SelectService()),
+              );
+            }),
       ),
     );
   }

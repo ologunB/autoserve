@@ -38,12 +38,6 @@ class Styles {
     color: Colors.grey[700],
   );
 
-  static TextStyle h1_app_name = defaultStyle.copyWith(
-    fontSize: 30.0,
-    height: 35,
-    fontFamily: 'Prata',
-  );
-
   static TextStyle title = defaultStyle.copyWith(
     fontSize: 30.0,
     height: 35,
@@ -55,36 +49,9 @@ class Styles {
     fontFamily: 'Radicals',
   );
 
-  static TextStyle h1_white = defaultStyle.copyWith(
-    fontWeight: FontWeight.w700,
-    fontSize: 18.0,
-    height: 22 / 18,
-    color: Colors.white,
-  );
-
   static TextStyle p = defaultStyle.copyWith(
     fontSize: 16.0,
     color: Colors.grey[800],
-  );
-
-  static TextStyle p_theme = p.copyWith(
-    color: appPrimaryColor,
-  );
-
-  static TextStyle p_white = p.copyWith(
-    color: Colors.white,
-  );
-
-  static TextStyle p_muted = p.copyWith(
-    color: Colors.grey[500],
-  );
-
-  static TextStyle p_forgot_password = p.copyWith(
-    color: Colors.blue,
-  );
-
-  static TextStyle p_button = defaultStyle.copyWith(
-    fontSize: 15.0,
   );
 
   static TextStyle error = defaultStyle.copyWith(

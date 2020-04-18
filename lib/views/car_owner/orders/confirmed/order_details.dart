@@ -324,10 +324,13 @@ class _OrderDetailsState extends State<OrderDetails> {
                     color: Colors.grey,
                     fontWeight: FontWeight.w500),
               ),
-              CustomButton(title: "Rebook this Service", onPress: () {})
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CustomButton(title: "Rebook this Service", onPress: () {}),
       ),
     );
   }

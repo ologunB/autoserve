@@ -1,5 +1,6 @@
 import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
+import 'package:autoserve/views/partials/layout_template.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -83,7 +84,15 @@ class _ReserveConfirmedDoneState extends State<ReserveConfirmedDone> {
                       ]),
                 ),
               ),
-              CustomButton(title: "My Orders", onPress: () {})
+              CustomButton(
+                  title: "My Orders",
+                  onPress: () {
+                    Navigator.pushReplacement(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => LayoutTemplate(),
+                        ));
+                  })
             ],
           ),
         ),

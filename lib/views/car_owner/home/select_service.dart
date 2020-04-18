@@ -56,7 +56,7 @@ class _SelectServiceState extends State<SelectService> {
                       color: Colors.white,
                     ),
                     child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
                           Padding(
@@ -104,19 +104,19 @@ class _SelectServiceState extends State<SelectService> {
               },
               itemCount: 4,
             )),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-              child: CustomButton(
-                  title: "Next",
-                  onPress: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                            builder: (context) => SelectPaymentMethod()));
-                  }),
-            )
           ],
         ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        child: CustomButton(
+            title: "Next",
+            onPress: () {
+              Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) => SelectPaymentMethod()));
+            }),
       ),
     );
   }

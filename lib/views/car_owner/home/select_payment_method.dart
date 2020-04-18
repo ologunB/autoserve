@@ -221,22 +221,21 @@ class _PaymentMethodState extends State<SelectPaymentMethod> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: CustomButton(
-                      title: "Complete booking",
-                      onPress: () {
-                        Navigator.pop(context);
-                        Navigator.pushReplacement(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (context) => ReserveConfirmedDone(),
-                                fullscreenDialog: true));
-                      }),
-                )
               ],
             ),
           ),
+        ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          child: CustomButton(
+              title: "Complete booking",
+              onPress: () {
+                Navigator.pushReplacement(
+                    context,
+                    CupertinoPageRoute(
+                        builder: (context) => ReserveConfirmedDone(),
+                        fullscreenDialog: true));
+              }),
         ),
       ),
     );

@@ -16,6 +16,7 @@ class _OrdersViewState extends State<OrdersView>
   @override
   bool get wantKeepAlive => true;
   @override
+  // ignore: must_call_super
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,

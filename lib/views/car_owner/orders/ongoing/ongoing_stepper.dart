@@ -42,9 +42,11 @@ class _OngoingStepperState extends State<OngoingStepper> {
                           context: context,
                           barrierDismissible: true,
                           builder: (_) {
-                            return ClipRRect(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(25.0),
+                            return Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(25.0),
+                                ),
                               ),
                               child: AlertDialog(
                                 title: Center(
@@ -77,9 +79,9 @@ class _OngoingStepperState extends State<OngoingStepper> {
                                       child: Text(
                                         "CANCEL",
                                         style: TextStyle(
-                                          color: Colors.grey,
-                                          fontSize: 20,
-                                        ),
+                                            color: Colors.grey,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400),
                                       ),
                                     ),
                                   ),
@@ -97,9 +99,9 @@ class _OngoingStepperState extends State<OngoingStepper> {
                                       child: Text(
                                         "CONFIRM",
                                         style: TextStyle(
-                                          color: Styles.appPrimaryColor,
-                                          fontSize: 20,
-                                        ),
+                                            color: Styles.appPrimaryColor,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400),
                                       ),
                                     ),
                                   )

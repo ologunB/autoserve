@@ -26,10 +26,6 @@ class _ProfileViewState extends State<ProfileView> {
                       "assets/images/person.png",
                     ),
                     backgroundColor: Colors.grey[100],
-                    child: Image.asset(
-                      "assets/images/person.png",
-                      fit: BoxFit.contain,
-                    ),
                   ),
                 ),
                 Text("Richard Fredrick",

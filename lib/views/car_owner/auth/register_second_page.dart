@@ -39,7 +39,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
           padding: EdgeInsets.all(10),
           color: Colors.white,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
                 "Enter Verification Code",
@@ -51,6 +51,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
               SizedBox(height: 10),
               Text(
                 "Enter the verification code sent to your Email/Phone number",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
@@ -82,7 +83,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
               Center(
                 child: Text(
                   "Resend Code",
-                  style: TextStyle(color: Colors.blue, fontSize: 20),
+                  style: TextStyle(color: Styles.appPrimaryColor, fontSize: 20),
                 ),
               ),
               Padding(

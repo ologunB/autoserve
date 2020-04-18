@@ -80,7 +80,9 @@ class _ServiceStationProfileState extends State<ServiceStationProfile> {
                                 Icons.arrow_back,
                                 color: Colors.white,
                               ),
-                              onPressed: () {}),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              }),
                           IconButton(
                               icon: Icon(
                                 Icons.notifications,

@@ -243,8 +243,9 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                           children: <TextSpan>[
                             TextSpan(
                                 text: 'Log in',
-                                style:
-                                TextStyle(color: Colors.blue, fontSize: 18),
+                                style: TextStyle(
+                                    color: Styles.appPrimaryColor,
+                                    fontSize: 18),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
                                     // navigate to desired screen
@@ -273,7 +274,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.blue),
+                                      color: Styles.appPrimaryColor),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       // navigate to desired screen
@@ -290,7 +291,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.blue),
+                                      color: Styles.appPrimaryColor),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       // navigate to desired screen

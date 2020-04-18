@@ -31,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
                       CircleAvatar(
                         radius: 25,
                         backgroundColor: Colors.white,
-                        child: Image.asset(
+                        backgroundImage: AssetImage(
                           "assets/images/person.png",
                         ),
                       ),

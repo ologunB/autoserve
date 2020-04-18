@@ -38,7 +38,7 @@ class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
           padding: EdgeInsets.all(10),
           color: Colors.white,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
                 "Enter Verification Code",
@@ -81,7 +81,7 @@ class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
               Center(
                 child: Text(
                   "Resend Code",
-                  style: TextStyle(color: Colors.blue, fontSize: 20),
+                  style: TextStyle(color: Styles.appPrimaryColor, fontSize: 20),
                 ),
               ),
               Padding(

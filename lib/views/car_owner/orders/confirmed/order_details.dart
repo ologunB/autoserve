@@ -45,10 +45,6 @@ class _OrderDetailsState extends State<OrderDetails> {
                     "assets/images/person.png",
                   ),
                   backgroundColor: Colors.grey[100],
-                  child: Image.asset(
-                    "assets/images/person.png",
-                    fit: BoxFit.contain,
-                  ),
                 ),
               ),
               Text("Mercedes e450",

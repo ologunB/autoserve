@@ -33,9 +33,10 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                           child: Text(
                             "General Servicing",
                             style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.black),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF333333),
+                            ),
                           ),
                         ),
                       ),
@@ -44,11 +45,14 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                         color: Colors.blue,
                       ),
                       SizedBox(width: 10),
-                      Text("₦5000",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.black))
+                      Text(
+                        "₦10,000",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF333333),
+                        ),
+                      )
                     ],
                   ),
                   Row(
@@ -59,8 +63,8 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                         "FDA Services",
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF595959),
                         ),
                       )
                     ],
@@ -76,7 +80,7 @@ class _OngoingOrdersState extends State<OngoingOrders> {
                               "Ongoing",
                               style: TextStyle(
                                 fontSize: 16,
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.w500,
                                 color: Color(0xFF595959),
                               ),
                             )

@@ -63,19 +63,20 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Styles.appPrimaryColor),
+          iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Colors.white,
           elevation: 0.0,
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(right: 16.0, top: 30),
               child: Center(
                 child: Text(
                   "Step 1/2",
                   style: TextStyle(
-                      color: Styles.appPrimaryColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500),
+                    color: Color(0xFF6C63FF),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             )
@@ -92,17 +93,19 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                 Text(
                   "Let's get Started",
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold),
+                    color: Color(0xFF595959),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
                 SizedBox(height: 24),
                 Text(
                   "It takes just a minute to set up your account and start requestig for auto repair services",
                   style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.grey),
+                    fontSize: 16,
+//                    fontWeight: FontWeight.w400,
+                    color: Color(0xFFA8A8A8),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 18.0),
@@ -122,7 +125,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
 //                            fontWeight: FontWeight.w400,
                           ),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5.0),
+                            borderRadius: BorderRadius.circular(4.0),
                           )),
                       style: TextStyle(
                           color: Colors.black,
@@ -139,22 +142,24 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                         hintColor: Styles.commonDarkBackground),
                     child: TextField(
                       decoration: InputDecoration(
-                          fillColor: Styles.commonDarkBackground,
-                          filled: true,
-                          contentPadding: EdgeInsets.all(10),
-                          hintText: 'Email',
-                          hintStyle: TextStyle(
-                            color: Colors.grey[500],
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5.0),
-                          )),
+                        fillColor: Styles.commonDarkBackground,
+                        filled: true,
+                        contentPadding: EdgeInsets.all(10),
+                        hintText: 'Email',
+                        hintStyle: TextStyle(
+                          color: Colors.grey[500],
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                        ),
+                      ),
                       style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w400),
+                        color: Colors.black,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
                 ),
@@ -182,7 +187,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400),
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
+                                  borderRadius: BorderRadius.circular(4.0),
                                 ),
                               ),
                               style: TextStyle(
@@ -213,7 +218,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                               fontSize: 22,
                               fontWeight: FontWeight.w400),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5.0),
+                            borderRadius: BorderRadius.circular(4.0),
                           )),
                       style: TextStyle(
                           color: Colors.black,
@@ -222,7 +227,9 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 24.0,),
+                SizedBox(
+                  height: 24.0,
+                ),
                 CustomButton(
                   title: "Continue",
                   onPress: () {

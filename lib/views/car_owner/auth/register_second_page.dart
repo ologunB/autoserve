@@ -1,4 +1,3 @@
-import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/car_owner/auth/register_complete_page.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,19 +16,20 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Styles.appPrimaryColor),
+          iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Colors.white,
           elevation: 0.0,
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(right: 16.0, top: 30),
               child: Center(
                 child: Text(
                   "Step 2/2",
                   style: TextStyle(
-                      color: Styles.appPrimaryColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500),
+                    color: Color(0xFF6C63FF),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             )
@@ -79,7 +79,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                   ),
                   autoDismissKeyboard: true,
                   animationDuration: Duration(milliseconds: 300),
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(4),
                   fieldHeight: 54,
                   fieldWidth: 54,
                   onChanged: (value) {
@@ -90,7 +90,10 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
               Center(
                 child: Text(
                   "Resend Code",
-                  style: TextStyle(color: Colors.blue, fontSize: 16,),
+                  style: TextStyle(
+                    color: Color(0xFFA8A8A8),
+                    fontSize: 16,
+                  ),
                 ),
               ),
               Padding(

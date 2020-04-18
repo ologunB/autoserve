@@ -36,11 +36,14 @@ class _CancelledOrdersState extends State<CancelledOrders> {
                       color: Colors.blue,
                     ),
                     SizedBox(width: 10),
-                    Text("₦5000",
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.black))
+                    Text(
+                      "₦10,000",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF333333),
+                      ),
+                    )
                   ],
                 ),
                 Row(

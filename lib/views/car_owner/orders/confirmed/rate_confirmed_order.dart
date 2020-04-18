@@ -26,40 +26,50 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("16th April 2020 (8:45PM)",
-                style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w300,
-                    color: Colors.black)),
+            Text(
+              "16th April 2020 (8:45PM)",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF595959),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 18.0, right: 18, bottom: 18),
               child: Divider(),
             ),
             Padding(
               padding: const EdgeInsets.all(18.0),
-              child: Text("Thank You",
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black)),
+              child: Text(
+                "Thank You",
+                style: TextStyle(
+                  fontSize: 16,
+//                      fontWeight: FontWeight.w600,
+                  color: Color(0xFF595959),
+                ),
+              ),
             ),
             Text("Your feedback help us serve you better",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, color: Colors.grey)),
+                style: TextStyle(fontSize: 16, color: Color(0xFF979797))),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "assets/images/person.png",
+//                fit: BoxFit.contain,
+                ),
                 radius: 35,
                 backgroundColor: Colors.grey[100],
-                child: Image.asset(
-                  "assets/images/person.png",
-                  fit: BoxFit.contain,
-                ),
+//                child: Image.asset(
+//                  "assets/images/person.png",
+//                  fit: BoxFit.contain,
+//                ),
               ),
             ),
             Text("Please rate our service",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, color: Colors.grey)),
+                style: TextStyle(fontSize: 16, color: Color(0xFF979797),),),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SmoothStarRating(
@@ -117,7 +127,7 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                         title: "Submit",
                         onPress: () {
                           Navigator.pop(context);
-                        })
+                        },)
                   ],
                 ))
           ],

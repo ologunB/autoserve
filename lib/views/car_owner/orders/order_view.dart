@@ -30,7 +30,7 @@ class _OrdersViewState extends State<OrdersView>
               indicatorSize: TabBarIndicatorSize.tab,
               indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
-                  color: Styles.appPrimaryColor),
+                  color: Color(0xFF6C63FF)),
               tabs: [
                 Tab(
                   child: Align(

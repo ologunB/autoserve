@@ -36,3 +36,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Raleway-Regular.ttf
 
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+

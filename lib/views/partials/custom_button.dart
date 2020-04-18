@@ -22,8 +22,8 @@ class _CustomButtonState extends State<CustomButton> {
       padding: EdgeInsets.all(5.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Styles.appPrimaryColor,
-          borderRadius: BorderRadius.circular(10),
+          color: Color(0xFF6C63FF),
+          borderRadius: BorderRadius.circular(4),
         ),
         child: FlatButton(
           onPressed: () {
@@ -37,9 +37,10 @@ class _CustomButtonState extends State<CustomButton> {
                 widget.title,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFFFFFFF),
+                ),
               )
             ],
           ),

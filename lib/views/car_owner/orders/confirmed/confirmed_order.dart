@@ -33,9 +33,10 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                           child: Text(
                             "General Servicing",
                             style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.black),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF333333),
+                            ),
                           ),
                         ),
                       ),
@@ -44,11 +45,14 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                         color: Colors.blue,
                       ),
                       SizedBox(width: 10),
-                      Text("₦5000",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.black))
+                      Text(
+                        "₦10,000",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF333333),
+                        ),
+                      )
                     ],
                   ),
                   Row(
@@ -59,8 +63,8 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                         "FDA Services",
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF595959),
                         ),
                       )
                     ],
@@ -69,11 +73,14 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                     children: <Widget>[
                       Icon(Icons.date_range),
                       SizedBox(width: 12.36),
-                      Text("16th April 2020 (8:45)",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.black))
+                      Text(
+                        "16th April 2020 (8:45)",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF595959),
+                        ),
+                      )
                     ],
                   ),
                   Padding(

@@ -56,7 +56,7 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
                 "Home",
                 style: TextStyle(
                   fontSize: 10,
-                  fontWeight: FontWeight.w500,
+//                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
@@ -66,7 +66,7 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
                 "My Orders",
                 style: TextStyle(
                   fontSize: 10,
-                  fontWeight: FontWeight.w500,
+//                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
@@ -76,7 +76,7 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
                 "Payment",
                 style: TextStyle(
                   fontSize: 10,
-                  fontWeight: FontWeight.w500,
+//                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
@@ -86,7 +86,7 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
                 "Profile",
                 style: TextStyle(
                   fontSize: 10,
-                  fontWeight: FontWeight.w500,
+//                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),

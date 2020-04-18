@@ -95,7 +95,9 @@ class _HomeMapState extends State<HomeMap> {
                               children: <Widget>[
                                 IconButton(
                                     icon: Icon(Icons.arrow_back),
-                                    onPressed: () {}),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    }),
                                 CircleAvatar(
                                   radius: 25,
                                   backgroundColor: Colors.white,

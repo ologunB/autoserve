@@ -51,7 +51,7 @@ class _RegisterFirstPageState extends State<RegisterFirstPage> {
               "+${country.phoneCode} ",
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: FontWeight.w400),
             ),
           ],

@@ -20,7 +20,7 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                   CupertinoPageRoute(builder: (context) => OrderDetails()));
             },
             child: Container(
-              padding: EdgeInsets.only(left: 8, right: 8, top: 8),
+              padding: EdgeInsets.only(left: 8, right: 8, top: 29),
               color: Colors.white,
               child: Column(
                 children: <Widget>[
@@ -33,9 +33,10 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                           child: Text(
                             "General Servicing",
                             style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.black),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF333333),
+                            ),
                           ),
                         ),
                       ),
@@ -44,33 +45,42 @@ class _ConfirmedOrdersState extends State<ConfirmedOrders> {
                         color: Colors.blue,
                       ),
                       SizedBox(width: 10),
-                      Text("₦5000",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.black))
+                      Text(
+                        "₦10,000",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF333333),
+                        ),
+                      )
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      Icon(Icons.directions_boat),
-                      SizedBox(width: 10),
-                      Text("FDA Services",
-                          style: TextStyle(
-                              fontSize: 19,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.black))
+                      Icon(Icons.ev_station),
+                      SizedBox(width: 12.36),
+                      Text(
+                        "FDA Services",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF595959),
+                        ),
+                      )
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       Icon(Icons.date_range),
-                      SizedBox(width: 10),
-                      Text("16th April 2020 (8:45)",
-                          style: TextStyle(
-                              fontSize: 19,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.black))
+                      SizedBox(width: 12.36),
+                      Text(
+                        "16th April 2020 (8:45)",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF595959),
+                        ),
+                      )
                     ],
                   ),
                   Padding(

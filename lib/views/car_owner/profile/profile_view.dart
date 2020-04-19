@@ -28,18 +28,23 @@ class _ProfileViewState extends State<ProfileView> {
                     backgroundColor: Colors.grey[100],
                   ),
                 ),
-                Text("Richard Fredrick",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold)),
-                Text("fichardfredrick@yahoo.com",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                    )),
+                Text(
+                  "Richard Fredrick",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xFF595959),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "fichardfredrick@yahoo.com",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF595959),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Divider(),
@@ -50,14 +55,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.edit),
+                        child: Icon(
+                          Icons.edit,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Edit Profile",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Edit Profile",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -69,14 +81,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.directions_car),
+                        child: Icon(
+                          Icons.directions_car,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("My Vehicles",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "My Vehicles",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -88,14 +107,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.rss_feed),
+                        child: Icon(
+                          Icons.smartphone,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Follow Up",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Follow Us",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -107,14 +133,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.settings),
+                        child: Icon(
+                          Icons.settings,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Settings",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Settings",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -126,14 +159,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.star),
+                        child: Icon(
+                          Icons.star,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Rate our App",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Rate Our App",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -145,14 +185,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.help),
+                        child: Icon(
+                          Icons.help,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Help and Support",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Help and Support",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -164,14 +211,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.fingerprint),
+                        child: Icon(
+                          Icons.fingerprint,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Privacy and Legal",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Privacy and Legal",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],
@@ -183,14 +237,21 @@ class _ProfileViewState extends State<ProfileView> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.reply),
+                        child: Icon(
+                          Icons.reply,
+                          color: Color(0xFF979797),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Log Out",
-                              style:
-                              TextStyle(fontSize: 20, color: Colors.black)),
+                          child: Text(
+                            "Log Out",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xFF595959),
+                            ),
+                          ),
                         ),
                       )
                     ],

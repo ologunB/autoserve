@@ -1,4 +1,3 @@
-import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/car_owner/auth/register_complete_page.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,19 +16,20 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Styles.appPrimaryColor),
+          iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Colors.white,
           elevation: 0.0,
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(right: 16.0, top: 30),
               child: Center(
                 child: Text(
                   "Step 2/2",
                   style: TextStyle(
-                      color: Styles.appPrimaryColor,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w500),
+                    color: Color(0xFF6C63FF),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             )
@@ -46,35 +46,43 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
-                    fontWeight: FontWeight.w900),
+                    fontWeight: FontWeight.w500),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 24),
               Text(
                 "Enter the verification code sent to your Email/Phone number",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+//                    fontWeight: FontWeight.w400,
                     color: Colors.grey),
               ),
+              SizedBox(
+                height: 48.0,
+              ),
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.only(
+                  left: 18.0,
+                  right: 18.0,
+                  bottom: 18.0,
+                ),
                 child: PinCodeTextField(
-                  length: 5,
+                  length: 4,
                   obsecureText: false,
                   inactiveColor: Colors.grey,
                   animationType: AnimationType.fade,
                   textInputType: TextInputType.numberWithOptions(),
                   shape: PinCodeFieldShape.box,
                   textStyle: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24),
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 24,
+                  ),
                   autoDismissKeyboard: true,
                   animationDuration: Duration(milliseconds: 300),
-                  borderRadius: BorderRadius.circular(5),
-                  fieldHeight: 50,
-                  fieldWidth: 50,
+                  borderRadius: BorderRadius.circular(4),
+                  fieldHeight: 54,
+                  fieldWidth: 54,
                   onChanged: (value) {
                     setState(() {});
                   },
@@ -83,11 +91,14 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
               Center(
                 child: Text(
                   "Resend Code",
-                  style: TextStyle(color: Styles.appPrimaryColor, fontSize: 20),
+                  style: TextStyle(
+                    color: Color(0xFFA8A8A8),
+                    fontSize: 16,
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 28.0),
+                padding: const EdgeInsets.symmetric(vertical: 29.0),
                 child: CustomButton(
                   title: "Continue",
                   onPress: () {

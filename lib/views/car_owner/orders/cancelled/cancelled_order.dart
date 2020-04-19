@@ -13,7 +13,7 @@ class _CancelledOrdersState extends State<CancelledOrders> {
       child: ListView.builder(
         itemBuilder: (context, index) {
           return Container(
-            padding: EdgeInsets.only(left: 8, right: 8, top: 8),
+            padding: EdgeInsets.only(left: 8, right: 8, top: 29),
             color: Colors.white,
             child: Column(
               children: <Widget>[
@@ -26,7 +26,7 @@ class _CancelledOrdersState extends State<CancelledOrders> {
                       child: Text(
                         "General Servicing",
                         style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             fontWeight: FontWeight.w800,
                             color: Colors.black),
                       ),
@@ -36,33 +36,42 @@ class _CancelledOrdersState extends State<CancelledOrders> {
                       color: Colors.blue,
                     ),
                     SizedBox(width: 10),
-                    Text("₦5000",
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.black))
+                    Text(
+                      "₦10,000",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF333333),
+                      ),
+                    )
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    Icon(Icons.directions_boat),
-                    SizedBox(width: 10),
-                    Text("FDA Services",
-                        style: TextStyle(
-                            fontSize: 19,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.black))
+                    Icon(Icons.ev_station),
+                    SizedBox(width: 12.36),
+                    Text(
+                      "FDA Services",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF595959),
+                      ),
+                    )
                   ],
                 ),
                 Row(
                   children: <Widget>[
                     Icon(Icons.date_range),
-                    SizedBox(width: 10),
-                    Text("Cancelled",
-                        style: TextStyle(
-                            fontSize: 19,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.red))
+                    SizedBox(width: 12.36),
+                    Text(
+                      "Cancelled",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFFEB001B),
+                      ),
+                    )
                   ],
                 ),
                 Padding(

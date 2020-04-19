@@ -51,26 +51,45 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
           showUnselectedLabels: true,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                title: Text(
-                  "Home",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                )),
+              icon: Icon(Icons.home),
+              title: Text(
+                "Home",
+                style: TextStyle(
+                  fontSize: 10,
+//                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.directions_boat),
-                title: Text("Orders",
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500))),
+              icon: Icon(Icons.local_car_wash),
+              title: Text(
+                "My Orders",
+                style: TextStyle(
+                  fontSize: 10,
+//                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.payment),
-                title: Text("Payment",
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500))),
+              icon: Icon(Icons.payment),
+              title: Text(
+                "Payment",
+                style: TextStyle(
+                  fontSize: 10,
+//                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                title: Text("Profile",
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500))),
+              icon: Icon(Icons.person),
+              title: Text(
+                "Profile",
+                style: TextStyle(
+                  fontSize: 10,
+//                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
           ]),
     );
   }

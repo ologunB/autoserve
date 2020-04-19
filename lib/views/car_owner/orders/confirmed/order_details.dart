@@ -139,9 +139,9 @@ class _OrderDetailsState extends State<OrderDetails> {
                       child: Text(
                         "Services",
                         style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF333333)),
                       ),
                     ),
                   ],

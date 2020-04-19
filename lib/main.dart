@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'AutoServe',
       theme: ThemeData(
           primarySwatch: Colors.blue,
-          fontFamily: 'Raleway',
+          fontFamily: 'Roboto',
           hintColor: Styles.commonDarkBackground),
       home: SelectUserType(),
     );

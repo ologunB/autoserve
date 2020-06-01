@@ -323,7 +323,7 @@ class _HomeViewState extends State<HomeView> {
                                           fontSize: 12,
                                           fontWeight: FontWeight.w500,
                                           color: Color(0xFF1BD647),
-                                    ),
+                                    ),),
                                     SizedBox(width: 20),
                                     Text(
                                       "9am - 6pm",
@@ -346,7 +346,7 @@ class _HomeViewState extends State<HomeView> {
                                         color: Color(0xFF535461),
                                   ),
                                 )
-                              ],
+                                )],
                             ),
                           ),
                         ),

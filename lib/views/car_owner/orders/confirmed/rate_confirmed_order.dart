@@ -64,8 +64,7 @@ class _RateConfirmedOrderState extends State<RateConfirmedOrder> {
                     "assets/images/person.png",
                   ),
                 ),
-                radius: 35,
-                backgroundColor: Colors.grey[100],
+
 //                child: Image.asset(
 //                  "assets/images/person.png",
 //                  fit: BoxFit.contain,

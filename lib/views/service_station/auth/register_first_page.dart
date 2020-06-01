@@ -72,10 +72,10 @@ class _RegisterMechFirstPageState extends State<RegisterMechFirstPage> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "Step 1/5",
+                  "Step 1/6",
                   style: TextStyle(
                       color: Styles.appPrimaryColor,
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: FontWeight.w500),
                 ),
               ),

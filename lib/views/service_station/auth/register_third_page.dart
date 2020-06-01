@@ -1,16 +1,15 @@
 import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
-import 'package:autoserve/views/service_station/auth/register_third_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class RegisterMechSecondPage extends StatefulWidget {
+class RegisterMechThirdPage extends StatefulWidget {
   @override
-  _RegisterMechSecondPageState createState() => _RegisterMechSecondPageState();
+  _RegisterMechThirdPageState createState() => _RegisterMechThirdPageState();
 }
 
-class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
+class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +24,7 @@ class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "Step 2/6",
+                  "Step 3/6",
                   style: TextStyle(
                       color: Styles.appPrimaryColor,
                       fontSize: 20,
@@ -42,7 +41,7 @@ class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Enter Verification Code",
+                "Service Station Info",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
@@ -50,7 +49,7 @@ class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
               ),
               SizedBox(height: 10),
               Text(
-                "Enter the verification code sent to your Email/Phone number",
+                "It only takes a minute to set up your service station account and start receiving requests",
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
@@ -90,11 +89,11 @@ class _RegisterMechSecondPageState extends State<RegisterMechSecondPage> {
                 child: CustomButton(
                   title: "Continue",
                   onPress: () {
-                      Navigator.push(
+                    /*    Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => RegisterMechThirdPage()));
-
+                            builder: (context) => RegisterCompleteScreen()));
+                 */
                   },
                 ),
               ),

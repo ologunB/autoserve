@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../utils/styles.dart';
 
 class CustomTextField extends StatefulWidget {
-  String name;
+  @required String name;
   TextEditingController controller;
 
   CustomTextField({this.controller, this.name});

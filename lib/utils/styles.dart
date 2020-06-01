@@ -9,7 +9,7 @@ class Styles {
   static Color appAccentColor = Colors.cyan[600];
   static Color appCanvasColor = Colors.white;
   static Color appBackground = Colors.blue;
-  static Color commonDarkBackground = Colors.grey[200];
+  static Color commonDarkBackground = Color.fromRGBO(245,245, 255, 1);
   static Color commonDarkCardBackground = Colors.grey[200]; // #1e2d3b
   static TextTheme appTextTheme = TextTheme(
     headline: TextStyle(

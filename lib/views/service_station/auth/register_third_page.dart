@@ -1,8 +1,11 @@
 import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/partials/custom_button.dart';
+import 'package:autoserve/views/service_station/auth/register_fourth_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
+import '../../partials/custome_textfield.dart';
 
 class RegisterMechThirdPage extends StatefulWidget {
   @override
@@ -10,6 +13,8 @@ class RegisterMechThirdPage extends StatefulWidget {
 }
 
 class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
+  bool isRegistered = true;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,7 +43,7 @@ class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
           padding: EdgeInsets.all(10),
           color: Colors.white,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 "Service Station Info",
@@ -55,45 +60,123 @@ class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
                     fontWeight: FontWeight.w400,
                     color: Colors.grey),
               ),
-              Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: PinCodeTextField(
-                  length: 4,autoFocus: true,
-                  obsecureText: false,
-                  inactiveColor: Colors.grey,
-                  animationType: AnimationType.fade,
-                  textInputType: TextInputType.number,
-                  shape: PinCodeFieldShape.box,
-                  textStyle: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24),
-                  autoDismissKeyboard: true,
-                  animationDuration: Duration(milliseconds: 300),
-                  borderRadius: BorderRadius.circular(5),
-                  fieldHeight: 50,
-                  fieldWidth: 50,
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                ),
+              SizedBox(height: 20),
+              Text(
+                "Is your service station registered?",
+                style: TextStyle(color: Colors.black, fontSize: 20),
               ),
-              Center(
-                child: Text(
-                  "Resend Code",
-                  style: TextStyle(color: Styles.appPrimaryColor, fontSize: 20),
-                ),
+              SizedBox(height: 20),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(blurRadius: 22, color: Colors.grey[300])
+                        ],
+                        color: isRegistered
+                            ? Styles.appPrimaryColor
+                            : Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(5),
+                            bottomLeft: Radius.circular(5)),
+                      ),
+                      child: FlatButton(
+                        onPressed: () {
+                          setState(() {
+                            isRegistered = true;
+                          });
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              "YES",
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w900,
+                                  color: isRegistered
+                                      ? Colors.white
+                                      : Styles.appPrimaryColor),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(blurRadius: 15, color: Colors.grey[300])
+                        ],
+                        color: isRegistered
+                            ? Colors.white
+                            : Styles.appPrimaryColor,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(5),
+                            bottomRight: Radius.circular(5)),
+                      ),
+                      child: FlatButton(
+                        onPressed: () {
+                          setState(() {
+                            isRegistered = false;
+                          });
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              "NO",
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w900,
+                                  color: isRegistered
+                                      ? Styles.appPrimaryColor
+                                      : Colors.white),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
+              SizedBox(height: 20),
+              CustomTextField(
+                name: "Registered Number",
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Service Station Address",
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
+              SizedBox(height: 20),
+              CustomTextField(
+                name: "Street",
+              ),
+              SizedBox(height: 20),
+              CustomTextField(
+                name: "City",
+              ),
+              SizedBox(height: 20),
+              CustomTextField(
+                name: "State",
+              ),
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 28.0),
                 child: CustomButton(
                   title: "Continue",
                   onPress: () {
-                    /*    Navigator.push(
+                    Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => RegisterCompleteScreen()));
-                 */
+                            builder: (context) => RegisterMechFourthPage()));
                   },
                 ),
               ),

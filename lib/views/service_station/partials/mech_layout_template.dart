@@ -2,7 +2,7 @@ import 'package:autoserve/utils/styles.dart';
 import 'package:autoserve/views/car_owner/orders/order_view.dart';
 import 'package:autoserve/views/car_owner/payment/payment_view.dart';
 import 'package:autoserve/views/service_station/home/mech_home_view.dart';
-import 'package:autoserve/views/service_station/profile/service_station_profile.dart';
+import 'package:autoserve/views/service_station/profile/mech_service_station_profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +24,7 @@ class _MechLayoutTemplateState extends State<MechLayoutTemplate> {
     PaymentView(
       key: PageStorageKey('Page3'),
     ),
-    ServiceStationProfile(
+    MechServiceStationProfile(
       key: PageStorageKey('Page4'),
     )
   ];

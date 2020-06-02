@@ -29,6 +29,7 @@ dependencies:
   geocoder: ^0.2.1
   provider:
   intl:
+  percent_indicator:
   smooth_star_rating:
 
 dev_dependencies:

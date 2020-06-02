@@ -3,7 +3,6 @@ import 'package:autoserve/views/partials/custom_button.dart';
 import 'package:autoserve/views/service_station/auth/register_fourth_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../partials/custome_textfield.dart';
 
@@ -42,8 +41,8 @@ class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
         body: Container(
           padding: EdgeInsets.all(10),
           color: Colors.white,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
+            //  crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 "Service Station Info",
@@ -116,8 +115,9 @@ class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
                             ? Colors.white
                             : Styles.appPrimaryColor,
                         borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(5),
-                            bottomRight: Radius.circular(5)),
+                          topRight: Radius.circular(5),
+                          bottomRight: Radius.circular(5),
+                        ),
                       ),
                       child: FlatButton(
                         onPressed: () {
@@ -174,9 +174,11 @@ class _RegisterMechThirdPageState extends State<RegisterMechThirdPage> {
                   title: "Continue",
                   onPress: () {
                     Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                            builder: (context) => RegisterMechFourthPage()));
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => RegisterMechFourthPage(),
+                      ),
+                    );
                   },
                 ),
               ),

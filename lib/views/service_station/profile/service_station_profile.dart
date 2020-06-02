@@ -6,6 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ServiceStationProfile extends StatefulWidget {
+  ServiceStationProfile({Key key}) : super(key: key);
+
   @override
   _ServiceStationProfileState createState() => _ServiceStationProfileState();
 }
